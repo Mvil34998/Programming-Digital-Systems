@@ -4,7 +4,7 @@
 
 `Documentation_Map.md` определяет карту документации проекта Programming Digital Systems.
 
-Документ показывает структуру будущей базы знаний, связи между слоями документации и маршрут движения пользователя от идеи цифровой системы к реализации, проверке, сопровождению и развитию.
+Документ показывает структуру будущей базы знаний, связи между слоями документации и маршрут движения пользователя от идеи цифровой системы к реализации, проверке, эксплуатации, сопровождению и развитию.
 
 ## 2. Место документа в системе знаний
 
@@ -53,7 +53,9 @@ Programming-Digital-Systems
 |   |   |-- Toolchain_Selection_Category_Rules.md
 |   |   |-- Roadmap_Implementation_Architecture.md
 |   |   |-- Roadmap_Testing.md
+|   |   |-- Roadmap_Operation.md
 |   |   |-- Roadmap_Maintenance.md
+|   |   |-- Roadmap_System_Evolution.md
 |   |
 |   |-- 04_questionnaires/
 |   |   |-- Questionnaire_System_Design.md
@@ -62,7 +64,9 @@ Programming-Digital-Systems
 |   |   |-- Questionnaire_Toolchain_Selection.md
 |   |   |-- Questionnaire_Implementation_Architecture.md
 |   |   |-- Questionnaire_Testing.md
+|   |   |-- Questionnaire_Operation.md
 |   |   |-- Questionnaire_Maintenance.md
+|   |   |-- Questionnaire_System_Evolution.md
 |   |
 |   |-- 05_encyclopedia/
 |   |   |-- Entities.md
@@ -98,6 +102,8 @@ Programming-Digital-Systems
 |       |-- Book_04_Technical_Requirements.md
 |       |-- Book_05_Toolchain_Selection.md
 |       |-- Book_06_Implementation_Architecture.md
+|       |-- Book_07_Testing.md
+|       |-- Book_08_Operation_Maintenance_Evolution.md
 ```
 
 ## 4. Слои документации
@@ -162,7 +168,9 @@ Programming-Digital-Systems
 - `docs/03_roadmaps/Toolchain_Selection_Category_Rules.md`
 - `docs/03_roadmaps/Roadmap_Implementation_Architecture.md`
 - `docs/03_roadmaps/Roadmap_Testing.md`
+- `docs/03_roadmaps/Roadmap_Operation.md`
 - `docs/03_roadmaps/Roadmap_Maintenance.md`
+- `docs/03_roadmaps/Roadmap_System_Evolution.md`
 
 ### 4.7. Анкетный слой
 
@@ -176,7 +184,9 @@ Programming-Digital-Systems
 - `docs/04_questionnaires/Questionnaire_Toolchain_Selection.md`
 - `docs/04_questionnaires/Questionnaire_Implementation_Architecture.md`
 - `docs/04_questionnaires/Questionnaire_Testing.md`
+- `docs/04_questionnaires/Questionnaire_Operation.md`
 - `docs/04_questionnaires/Questionnaire_Maintenance.md`
+- `docs/04_questionnaires/Questionnaire_System_Evolution.md`
 
 ### 4.8. Энциклопедический слой
 
@@ -240,6 +250,8 @@ Programming-Digital-Systems
 - `docs/08_books/Book_04_Technical_Requirements.md`
 - `docs/08_books/Book_05_Toolchain_Selection.md`
 - `docs/08_books/Book_06_Implementation_Architecture.md`
+- `docs/08_books/Book_07_Testing.md`
+- `docs/08_books/Book_08_Operation_Maintenance_Evolution.md`
 
 ## 5. Главный маршрут разработки
 
@@ -255,7 +267,8 @@ flowchart TD
     H --> I[Тестирование]
     I --> J[Эксплуатация]
     J --> K[Сопровождение]
-    K --> L[Развитие]
+    K --> L[Развитие системы]
+    L --> B
 ```
 
 ## 6. Связь roadmap-документов и анкет
@@ -268,7 +281,9 @@ flowchart TD
     R4[Roadmap Toolchain Selection] --> Q4[Questionnaire Toolchain Selection]
     R5[Roadmap Implementation Architecture] --> Q5[Questionnaire Implementation Architecture]
     R6[Roadmap Testing] --> Q6[Questionnaire Testing]
-    R7[Roadmap Maintenance] --> Q7[Questionnaire Maintenance]
+    R7[Roadmap Operation] --> Q7[Questionnaire Operation]
+    R8[Roadmap Maintenance] --> Q8[Questionnaire Maintenance]
+    R9[Roadmap System Evolution] --> Q9[Questionnaire System Evolution]
 ```
 
 ## 7. Связь технических требований и инструментария
@@ -280,7 +295,21 @@ flowchart TD
     C --> D[Implementation Architecture]
 ```
 
-## 8. Связь энциклопедии с проектированием
+## 8. Связь эксплуатации, сопровождения и развития
+
+```mermaid
+flowchart TD
+    A[Testing] --> B[Operation]
+    B --> C[Maintenance]
+    C --> D[System Evolution]
+    D --> E[System Design]
+    D --> F[Technical Requirements]
+    D --> G[System Architecture Design]
+    D --> H[Implementation Architecture]
+    D --> I[Testing]
+```
+
+## 9. Связь энциклопедии с проектированием
 
 ```mermaid
 flowchart TD
@@ -298,9 +327,13 @@ flowchart TD
     SAD --> TR[Technical Requirements]
     TR --> TS[Toolchain Selection]
     TS --> IA[Implementation Architecture]
+    IA --> TEST[Testing]
+    TEST --> OP[Operation]
+    OP --> MAINT[Maintenance]
+    MAINT --> EVO[System Evolution]
 ```
 
-## 9. Правило расширения карты
+## 10. Правило расширения карты
 
 Карта документации должна обновляться при добавлении нового крупного документа, слоя или маршрута.
 
@@ -315,7 +348,7 @@ flowchart TD
 - содержит диаграмму общего назначения;
 - входит в структуру будущей книги или серии книг.
 
-## 10. Критерии завершения карты
+## 11. Критерии завершения карты
 
 Карта считается актуальной, если:
 
@@ -326,11 +359,15 @@ flowchart TD
 - технические требования отделены от выбора инструментария;
 - связь требований и инструментария вынесена в отдельный документ;
 - проектирование архитектуры реализации выделено отдельным этапом;
+- тестирование выделено отдельным этапом;
+- эксплуатация выделена отдельным этапом;
+- сопровождение выделено отдельным этапом;
+- развитие системы выделено отдельным этапом;
 - показана связь roadmap-документов и анкет;
 - показана связь энциклопедии с проектированием;
 - новые документы не появляются вне карты.
 
-## 11. Связанные документы
+## 12. Связанные документы
 
 ### Входные документы
 
@@ -366,6 +403,7 @@ flowchart TD
   - Используется для: трассировки требований к критериям выбора инструментов.
   - Ограничение: не должен заменять документы требований и выбора инструментария.
 
-## 12. История изменений
+## 13. История изменений
 
 - Updated: добавлены `Requirements_To_Toolchain_Map.md`, `Toolchain_Selection_Category_Rules.md`, агентный слой и актуализирован маршрут до архитектуры реализации.
+- Updated: добавлены `Roadmap_Operation.md`, `Questionnaire_Operation.md`, `Roadmap_System_Evolution.md`, `Questionnaire_System_Evolution.md`; маршрут расширен до эксплуатации, сопровождения и развития системы.
