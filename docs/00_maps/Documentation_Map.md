@@ -8,22 +8,22 @@
 
 ## 2. Главные входные точки
 
-- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
   - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
   - Используется для: понимания общего масштаба работы.
   - Ограничение: не заменяет карту документации.
 
-- [AGENTS.md](../../AGENTS.md)
+- [[AGENTS|AGENTS]]
   - Передаёт: правила, которые AI-агент должен учитывать перед созданием и изменением документов.
   - Используется для: соблюдения структуры, маршрута и регламентов.
   - Ограничение: не заменяет регламенты и roadmap-документы.
 
-- [Development Route Map](Development_Route_Map.md)
+- [[docs/00_maps/Development_Route_Map|Development Route Map]]
   - Передаёт: полный маршрут разработки от идеи до развития системы.
   - Используется для: понимания порядка движения по проекту.
   - Ограничение: не раскрывает подробно каждый этап.
 
-- [Knowledge Layer Map](Knowledge_Layer_Map.md)
+- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
   - Передаёт: карту слоёв базы знаний.
   - Используется для: понимания назначения roadmap, анкет, энциклопедии, примеров и книг.
   - Ограничение: не заменяет маршрут разработки.
@@ -34,11 +34,8 @@
 Programming-Digital-Systems
 |
 |-- PROJECT_SCOPE.md
-|
 |-- AGENTS.md
-|
 |-- docs/
-|   |
 |   |-- 00_maps/
 |   |-- 01_regulations/
 |   |-- 02_templates/
@@ -58,7 +55,7 @@ Programming-Digital-Systems
 
 Документы:
 
-- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
 
 ### 4.2. Агентный слой
 
@@ -66,7 +63,7 @@ Programming-Digital-Systems
 
 Документы:
 
-- [AGENTS.md](../../AGENTS.md)
+- [[AGENTS|AGENTS]]
 
 ### 4.3. Навигационный слой
 
@@ -74,22 +71,22 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Documentation Map](Documentation_Map.md)
+- [[docs/00_maps/Documentation_Map|Documentation Map]]
   - Передаёт: общую структуру базы знаний.
   - Используется для: ориентации в документации.
   - Ограничение: не заменяет подробные roadmap-документы.
 
-- [Development Route Map](Development_Route_Map.md)
+- [[docs/00_maps/Development_Route_Map|Development Route Map]]
   - Передаёт: полный маршрут разработки.
   - Используется для: движения от идеи до развития системы.
   - Ограничение: не заменяет анкеты.
 
-- [Knowledge Layer Map](Knowledge_Layer_Map.md)
+- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
   - Передаёт: карту слоёв знаний.
   - Используется для: понимания назначения каждого слоя документации.
   - Ограничение: не заменяет карту маршрута.
 
-- [Requirements To Toolchain Map](Requirements_To_Toolchain_Map.md)
+- [[docs/00_maps/Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
   - Передаёт: переход от технических требований к критериям выбора инструментария.
   - Используется для: предотвращения прямого выбора инструмента без критериев.
   - Ограничение: не заменяет документы требований и инструментария.
@@ -100,22 +97,22 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Documentation System Regulation](../01_regulations/Documentation_System_Regulation.md)
+- [[docs/01_regulations/Documentation_System_Regulation|Documentation System Regulation]]
   - Передаёт: правила построения системы документации.
   - Используется для: согласования структуры документов.
   - Ограничение: не заменяет карту документации.
 
-- [Document Writing Rules](../01_regulations/Document_Writing_Rules.md)
+- [[docs/01_regulations/Document_Writing_Rules|Document Writing Rules]]
   - Передаёт: правила изложения и оформления.
   - Используется для: исключения личного шума и мусора.
   - Ограничение: не определяет маршрут разработки.
 
-- [Link Rules](../01_regulations/Link_Rules.md)
-  - Передаёт: правила рабочих Markdown-ссылок.
-  - Используется для: связывания документов между собой.
+- [[docs/01_regulations/Link_Rules|Link Rules]]
+  - Передаёт: правила Obsidian-ссылок.
+  - Используется для: связывания документов между собой и отображения связей в Graph view.
   - Ограничение: не определяет содержание документов.
 
-- [Diagram Rules](../01_regulations/Diagram_Rules.md)
+- [[docs/01_regulations/Diagram_Rules|Diagram Rules]]
   - Передаёт: правила использования диаграмм.
   - Используется для: визуального объяснения структуры и связей.
   - Ограничение: не заменяет текстовое содержание.
@@ -126,12 +123,12 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Roadmap Document Template](../02_templates/Roadmap_Document_Template.md)
+- [[docs/02_templates/Roadmap_Document_Template|Roadmap Document Template]]
   - Передаёт: структуру roadmap-документов.
   - Используется для: создания новых roadmap.
   - Ограничение: не содержит содержание конкретного этапа.
 
-- [Questionnaire Document Template](../02_templates/Questionnaire_Document_Template.md)
+- [[docs/02_templates/Questionnaire_Document_Template|Questionnaire Document Template]]
   - Передаёт: структуру анкет.
   - Используется для: создания новых анкет.
   - Ограничение: не содержит конкретные вопросы этапа.
@@ -142,52 +139,52 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
   - Передаёт: проектирование сущностей, данных, правил, состояний, событий, потоков, хранения и ошибок.
   - Используется для: первого проектного этапа после идеи и предметной области.
   - Ограничение: не выбирает инструментарий.
 
-- [Roadmap: System Architecture Design](../03_roadmaps/Roadmap_System_Architecture_Design.md)
+- [[docs/03_roadmaps/Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
   - Передаёт: проектирование слоёв, модулей, моделей, интерфейсов, зависимостей и точек расширения.
   - Используется для: архитектурной организации системы.
   - Ограничение: не подменяет архитектуру реализации.
 
-- [Roadmap: Technical Requirements](../03_roadmaps/Roadmap_Technical_Requirements.md)
+- [[docs/03_roadmaps/Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
   - Передаёт: проверяемые технические условия.
   - Используется для: подготовки критериев проверки и выбора инструментария.
   - Ограничение: не выбирает инструменты.
 
-- [Roadmap: Toolchain Selection](../03_roadmaps/Roadmap_Toolchain_Selection.md)
+- [[docs/03_roadmaps/Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
   - Передаёт: правила выбора базового, прикладного и специализированного инструментария.
   - Используется для: выбора инструментов по требованиям и ограничениям.
   - Ограничение: не меняет требования.
 
-- [Toolchain Selection Category Rules](../03_roadmaps/Toolchain_Selection_Category_Rules.md)
+- [[docs/03_roadmaps/Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
   - Передаёт: условия применения категорий инструментария.
   - Используется для: предотвращения ощущения, что PLC, embedded или CNC/CAM нужны каждому проекту.
   - Ограничение: не выбирает конкретный инструмент.
 
-- [Roadmap: Implementation Architecture](../03_roadmaps/Roadmap_Implementation_Architecture.md)
+- [[docs/03_roadmaps/Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
   - Передаёт: проектирование структуры проекта, модулей, адаптеров, конфигурации, логирования, тестов и зависимостей.
   - Используется для: подготовки к коду.
   - Ограничение: не пишет код.
 
-- [Roadmap: Testing](../03_roadmaps/Roadmap_Testing.md)
+- [[docs/03_roadmaps/Roadmap_Testing|Roadmap: Testing]]
   - Передаёт: правила проверки требований, модулей, интерфейсов, ошибок и сценариев.
   - Используется для: подтверждения качества системы.
   - Ограничение: не подменяет эксплуатацию.
 
-- [Roadmap: Operation](../03_roadmaps/Roadmap_Operation.md)
+- [[docs/03_roadmaps/Roadmap_Operation|Roadmap: Operation]]
   - Передаёт: правила запуска, рабочих сценариев, ошибок пользователя, логов и ограничений эксплуатации.
   - Используется для: подготовки реального использования системы.
   - Ограничение: не подменяет сопровождение.
 
-- [Roadmap: Maintenance](../03_roadmaps/Roadmap_Maintenance.md)
+- [[docs/03_roadmaps/Roadmap_Maintenance|Roadmap: Maintenance]]
   - Передаёт: правила регистрации дефектов, исправлений, регрессии, обновлений и журнала изменений.
   - Используется для: сопровождения системы после эксплуатации.
   - Ограничение: не подменяет развитие системы.
 
-- [Roadmap: System Evolution](../03_roadmaps/Roadmap_System_Evolution.md)
+- [[docs/03_roadmaps/Roadmap_System_Evolution|Roadmap: System Evolution]]
   - Передаёт: правила анализа новых функций, новых сценариев, изменения требований, архитектуры и тестов.
   - Используется для: развития системы без разрушения архитектуры.
   - Ограничение: не маскирует дефекты как новые функции.
@@ -198,15 +195,15 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Questionnaire: System Design](../04_questionnaires/Questionnaire_System_Design.md)
-- [Questionnaire: System Architecture Design](../04_questionnaires/Questionnaire_System_Architecture_Design.md)
-- [Questionnaire: Technical Requirements](../04_questionnaires/Questionnaire_Technical_Requirements.md)
-- [Questionnaire: Toolchain Selection](../04_questionnaires/Questionnaire_Toolchain_Selection.md)
-- [Questionnaire: Implementation Architecture](../04_questionnaires/Questionnaire_Implementation_Architecture.md)
-- [Questionnaire: Testing](../04_questionnaires/Questionnaire_Testing.md)
-- [Questionnaire: Operation](../04_questionnaires/Questionnaire_Operation.md)
-- [Questionnaire: Maintenance](../04_questionnaires/Questionnaire_Maintenance.md)
-- [Questionnaire: System Evolution](../04_questionnaires/Questionnaire_System_Evolution.md)
+- [[docs/04_questionnaires/Questionnaire_System_Design|Questionnaire: System Design]]
+- [[docs/04_questionnaires/Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]]
+- [[docs/04_questionnaires/Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
+- [[docs/04_questionnaires/Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]]
+- [[docs/04_questionnaires/Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
+- [[docs/04_questionnaires/Questionnaire_Testing|Questionnaire: Testing]]
+- [[docs/04_questionnaires/Questionnaire_Operation|Questionnaire: Operation]]
+- [[docs/04_questionnaires/Questionnaire_Maintenance|Questionnaire: Maintenance]]
+- [[docs/04_questionnaires/Questionnaire_System_Evolution|Questionnaire: System Evolution]]
 
 Эти документы используются для практического заполнения проектных решений по этапам маршрута.
 
@@ -216,16 +213,16 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Entities](../05_encyclopedia/Entities.md)
-- [Data](../05_encyclopedia/Data.md)
-- [Rules](../05_encyclopedia/Rules.md)
-- [States](../05_encyclopedia/States.md)
-- [Events](../05_encyclopedia/Events.md)
-- [Flows](../05_encyclopedia/Flows.md)
-- [Storage](../05_encyclopedia/Storage.md)
-- [Errors](../05_encyclopedia/Errors.md)
-- [Interfaces](../05_encyclopedia/Interfaces.md)
-- [Architecture](../05_encyclopedia/Architecture.md)
+- [[docs/05_encyclopedia/Entities|Entities]]
+- [[docs/05_encyclopedia/Data|Data]]
+- [[docs/05_encyclopedia/Rules|Rules]]
+- [[docs/05_encyclopedia/States|States]]
+- [[docs/05_encyclopedia/Events|Events]]
+- [[docs/05_encyclopedia/Flows|Flows]]
+- [[docs/05_encyclopedia/Storage|Storage]]
+- [[docs/05_encyclopedia/Errors|Errors]]
+- [[docs/05_encyclopedia/Interfaces|Interfaces]]
+- [[docs/05_encyclopedia/Architecture|Architecture]]
 
 Энциклопедия объясняет понятия, а roadmap ведёт пользователя по процессу.
 
@@ -235,12 +232,12 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Examples Index](../06_examples/Examples_Index.md)
+- [[docs/06_examples/Examples_Index|Examples Index]]
   - Передаёт: структуру категорий примеров.
   - Используется для: выбора учебного примера.
   - Ограничение: не заменяет сами примеры.
 
-- [Python File Processing Utility](../06_examples/Scripts/Python_File_Processing_Utility.md)
+- [[docs/06_examples/Scripts/Python_File_Processing_Utility|Python File Processing Utility]]
   - Передаёт: первый полный учебный пример Python-утилиты обработки файлов.
   - Используется для: демонстрации полного маршрута от идеи до развития.
   - Ограничение: не является production-реализацией.
@@ -262,9 +259,9 @@ Programming-Digital-Systems
 
 Документы:
 
-- [System Map](../07_diagrams/System_Map.md)
-- [Documentation Map Diagrams](../07_diagrams/Documentation_Map_Diagrams.md)
-- [Development Route Diagrams](../07_diagrams/Development_Route_Diagrams.md)
+- [[docs/07_diagrams/System_Map|System Map]]
+- [[docs/07_diagrams/Documentation_Map_Diagrams|Documentation Map Diagrams]]
+- [[docs/07_diagrams/Development_Route_Diagrams|Development Route Diagrams]]
 
 ### 4.11. Книжный слой
 
@@ -272,14 +269,14 @@ Programming-Digital-Systems
 
 Документы:
 
-- [Book 01: Foundations](../08_books/Book_01_Foundations.md)
-- [Book 02: System Design](../08_books/Book_02_System_Design.md)
-- [Book 03: System Architecture Design](../08_books/Book_03_System_Architecture_Design.md)
-- [Book 04: Technical Requirements](../08_books/Book_04_Technical_Requirements.md)
-- [Book 05: Toolchain Selection](../08_books/Book_05_Toolchain_Selection.md)
-- [Book 06: Implementation Architecture](../08_books/Book_06_Implementation_Architecture.md)
-- [Book 07: Testing](../08_books/Book_07_Testing.md)
-- [Book 08: Operation Maintenance Evolution](../08_books/Book_08_Operation_Maintenance_Evolution.md)
+- [[docs/08_books/Book_01_Foundations|Book 01: Foundations]]
+- [[docs/08_books/Book_02_System_Design|Book 02: System Design]]
+- [[docs/08_books/Book_03_System_Architecture_Design|Book 03: System Architecture Design]]
+- [[docs/08_books/Book_04_Technical_Requirements|Book 04: Technical Requirements]]
+- [[docs/08_books/Book_05_Toolchain_Selection|Book 05: Toolchain Selection]]
+- [[docs/08_books/Book_06_Implementation_Architecture|Book 06: Implementation Architecture]]
+- [[docs/08_books/Book_07_Testing|Book 07: Testing]]
+- [[docs/08_books/Book_08_Operation_Maintenance_Evolution|Book 08: Operation Maintenance Evolution]]
 
 ## 5. Главный маршрут разработки
 
@@ -320,7 +317,7 @@ flowchart TD
 
 - перечислены все основные слои документации;
 - указаны главные документы каждого слоя;
-- документы оформлены рабочими Markdown-ссылками;
+- документы оформлены рабочими Obsidian wikilinks;
 - показан маршрут от идеи к реализации;
 - технические требования отделены от выбора инструментария;
 - связь требований и инструментария вынесена в отдельный документ;
@@ -331,38 +328,38 @@ flowchart TD
 
 ### Входные документы
 
-- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
   - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
   - Используется для: построения общей карты базы знаний.
   - Ограничение: не описывает подробную структуру каждого слоя.
 
-- [AGENTS.md](../../AGENTS.md)
+- [[AGENTS|AGENTS]]
   - Передаёт: правила, которые AI-агент должен учитывать перед созданием и изменением документов.
   - Используется для: соблюдения структуры, маршрута и регламентов.
   - Ограничение: не заменяет карту документации.
 
-- [Documentation System Regulation](../01_regulations/Documentation_System_Regulation.md)
+- [[docs/01_regulations/Documentation_System_Regulation|Documentation System Regulation]]
   - Передаёт: правила построения системы документации.
   - Используется для: определения слоёв и связей документации.
   - Ограничение: не является навигационной картой.
 
 ### Выходные документы
 
-- [Development Route Map](Development_Route_Map.md)
+- [[docs/00_maps/Development_Route_Map|Development Route Map]]
   - Получает: общий маршрут разработки.
   - Используется для: детального описания движения от идеи до сопровождения.
   - Ограничение: не должен дублировать всю карту документации.
 
-- [Knowledge Layer Map](Knowledge_Layer_Map.md)
+- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
   - Получает: структуру слоёв базы знаний.
   - Используется для: детального описания энциклопедического, учебного, roadmap- и анкетного слоёв.
   - Ограничение: не должен заменять roadmap-документы.
 
-- [Requirements To Toolchain Map](Requirements_To_Toolchain_Map.md)
+- [[docs/00_maps/Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
   - Получает: место связующего документа между требованиями и инструментарием.
   - Используется для: трассировки требований к критериям выбора инструментов.
   - Ограничение: не должен заменять документы требований и выбора инструментария.
 
 ## 9. История изменений
 
-- Updated: документ приведён к рабочим Markdown-ссылкам вместо текстовых путей.
+- Updated: документ приведён к рабочим Obsidian wikilinks вместо текстовых путей и Markdown-only ссылок.
