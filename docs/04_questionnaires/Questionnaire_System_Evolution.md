@@ -2,7 +2,7 @@
 
 ## 1. Назначение анкеты
 
-`Questionnaire_System_Evolution.md` превращает `Roadmap_System_Evolution.md` в последовательность вопросов для анализа и планирования развития цифровой системы.
+`Questionnaire_System_Evolution.md` превращает [[docs/03_roadmaps/Roadmap_System_Evolution|Roadmap: System Evolution]] в последовательность вопросов для анализа и планирования развития цифровой системы.
 
 Анкета помогает определить:
 
@@ -22,7 +22,7 @@
 
 ## 2. Связанный roadmap-документ
 
-- `docs/03_roadmaps/Roadmap_System_Evolution.md`
+- [[docs/03_roadmaps/Roadmap_System_Evolution|Roadmap: System Evolution]]
   - Передаёт: порядок анализа развития системы.
   - Используется для: построения вопросов анкеты.
   - Ограничение: анкета фиксирует ответы пользователя, а не заменяет roadmap-документ.
@@ -50,6 +50,15 @@
 - результаты сопровождения;
 - список ограничений текущей системы;
 - список предложений пользователей или операторов.
+
+Основные входные документы:
+
+- [[docs/04_questionnaires/Questionnaire_Maintenance|Questionnaire: Maintenance]].
+- [[docs/04_questionnaires/Questionnaire_Operation|Questionnaire: Operation]].
+- [[docs/04_questionnaires/Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]].
+- [[docs/04_questionnaires/Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
+- [[docs/04_questionnaires/Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
+- [[docs/04_questionnaires/Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
 
 ## 5. Вопросы анкеты
 
@@ -82,6 +91,10 @@ ID запроса:
 
 Ответ считается заполненным, если запрос имеет источник, причину, потребителя и ожидаемый результат.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_System_Evolution#6.1. Запрос развития|Roadmap: System Evolution — запрос развития]].
+
 ## Q-EVO-002. Это развитие или сопровождение?
 
 ### Вопрос
@@ -111,6 +124,11 @@ ID запроса:
 ### Критерий заполнения
 
 Ответ считается заполненным, если запрос правильно направлен в развитие или сопровождение.
+
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Maintenance|Roadmap: Maintenance]].
+- [[docs/03_roadmaps/Roadmap_System_Evolution|Roadmap: System Evolution]].
 
 ## Q-EVO-003. Какой тип изменения требуется?
 
@@ -186,6 +204,18 @@ ID запроса:
 
 Ответ считается заполненным, если влияние на каждый базовый элемент проверено и явно указано `не влияет`, если изменений нет.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]].
+- [[docs/05_encyclopedia/Entities|Entities]].
+- [[docs/05_encyclopedia/Data|Data]].
+- [[docs/05_encyclopedia/Rules|Rules]].
+- [[docs/05_encyclopedia/States|States]].
+- [[docs/05_encyclopedia/Events|Events]].
+- [[docs/05_encyclopedia/Flows|Flows]].
+- [[docs/05_encyclopedia/Storage|Storage]].
+- [[docs/05_encyclopedia/Errors|Errors]].
+
 ## Q-EVO-005. Как изменение влияет на технические требования?
 
 ### Вопрос
@@ -223,6 +253,11 @@ ID запроса:
 
 Ответ считается заполненным, если указано, какие требования меняются и какие новые критерии выполнения нужны.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Technical_Requirements|Roadmap: Technical Requirements]].
+- [[docs/04_questionnaires/Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]].
+
 ## Q-EVO-006. Как изменение влияет на архитектуру системы?
 
 ### Вопрос
@@ -254,6 +289,11 @@ ID запроса:
 
 Ответ считается заполненным, если влияние на архитектуру системы проверено и указаны новые или изменяемые архитектурные решения.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]].
+- [[docs/04_questionnaires/Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
+
 ## Q-EVO-007. Нужно ли менять инструментарий?
 
 ### Вопрос
@@ -280,6 +320,11 @@ ID запроса:
 ### Критерий заполнения
 
 Ответ считается заполненным, если указано, можно ли продолжать с текущим инструментарием или требуется возврат к выбору инструментария.
+
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]].
+- [[docs/04_questionnaires/Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
 
 ## Q-EVO-008. Как изменение влияет на архитектуру реализации?
 
@@ -314,6 +359,11 @@ ID запроса:
 
 Ответ считается заполненным, если указаны изменения реализации или явно указано, что реализация не меняется.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]].
+- [[docs/04_questionnaires/Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
+
 ## Q-EVO-009. Как изменение влияет на тестирование?
 
 ### Вопрос
@@ -345,6 +395,11 @@ ID запроса:
 
 Ответ считается заполненным, если для новой возможности определены тесты и критерии приёмки.
 
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Testing|Roadmap: Testing]].
+- [[docs/04_questionnaires/Questionnaire_Testing|Questionnaire: Testing]].
+
 ## Q-EVO-010. Как изменение влияет на эксплуатацию?
 
 ### Вопрос
@@ -373,6 +428,11 @@ ID запроса:
 ### Критерий заполнения
 
 Ответ считается заполненным, если эксплуатационные изменения определены или явно указано, что эксплуатация не меняется.
+
+### Связанные документы
+
+- [[docs/03_roadmaps/Roadmap_Operation|Roadmap: Operation]].
+- [[docs/04_questionnaires/Questionnaire_Operation|Questionnaire: Operation]].
 
 ## Q-EVO-011. Сохраняется ли обратная совместимость?
 
@@ -429,6 +489,11 @@ ID запроса:
 
 Ответ считается заполненным, если решение принято и указаны следующие действия.
 
+### Связанные документы
+
+- [[docs/00_maps/Development_Route_Map|Development Route Map]].
+- [[docs/00_maps/Documentation_Map|Documentation Map]].
+
 ## 6. Контроль полноты ответов
 
 Анкета считается заполненной, если:
@@ -476,3 +541,4 @@ Q-OPEN-003:
 ## 9. История изменений
 
 - Initial version: создана анкета развития системы.
+- Updated: документ приведён к Obsidian wikilinks.
