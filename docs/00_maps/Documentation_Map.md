@@ -4,19 +4,29 @@
 
 `Documentation_Map.md` определяет карту документации проекта Programming Digital Systems.
 
-Документ показывает структуру будущей базы знаний, связи между слоями документации и маршрут движения пользователя от идеи цифровой системы к реализации, проверке, эксплуатации, сопровождению и развитию.
+Документ показывает структуру базы знаний, связи между слоями документации и маршрут движения пользователя от идеи цифровой системы к реализации, проверке, эксплуатации, сопровождению и развитию.
 
-## 2. Место документа в системе знаний
+## 2. Главные входные точки
 
-Этот документ относится к навигационному слою проекта.
+- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
+  - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
+  - Используется для: понимания общего масштаба работы.
+  - Ограничение: не заменяет карту документации.
 
-Документ используется для:
+- [AGENTS.md](../../AGENTS.md)
+  - Передаёт: правила, которые AI-агент должен учитывать перед созданием и изменением документов.
+  - Используется для: соблюдения структуры, маршрута и регламентов.
+  - Ограничение: не заменяет регламенты и roadmap-документы.
 
-- понимания общей структуры базы знаний;
-- поиска нужного документа;
-- определения следующего шага проектирования;
-- контроля связей между roadmap-документами, анкетами, регламентами, энциклопедическими статьями и примерами;
-- подготовки проекта к масштабу учебного курса, книги, серии книг или энциклопедии.
+- [Development Route Map](Development_Route_Map.md)
+  - Передаёт: полный маршрут разработки от идеи до развития системы.
+  - Используется для: понимания порядка движения по проекту.
+  - Ограничение: не раскрывает подробно каждый этап.
+
+- [Knowledge Layer Map](Knowledge_Layer_Map.md)
+  - Передаёт: карту слоёв базы знаний.
+  - Используется для: понимания назначения roadmap, анкет, энциклопедии, примеров и книг.
+  - Ограничение: не заменяет маршрут разработки.
 
 ## 3. Общая структура базы знаний
 
@@ -30,80 +40,14 @@ Programming-Digital-Systems
 |-- docs/
 |   |
 |   |-- 00_maps/
-|   |   |-- Documentation_Map.md
-|   |   |-- Development_Route_Map.md
-|   |   |-- Knowledge_Layer_Map.md
-|   |   |-- Requirements_To_Toolchain_Map.md
-|   |
 |   |-- 01_regulations/
-|   |   |-- Documentation_System_Regulation.md
-|   |   |-- Document_Writing_Rules.md
-|   |   |-- Link_Rules.md
-|   |   |-- Diagram_Rules.md
-|   |
 |   |-- 02_templates/
-|   |   |-- Roadmap_Document_Template.md
-|   |   |-- Questionnaire_Document_Template.md
-|   |
 |   |-- 03_roadmaps/
-|   |   |-- Roadmap_System_Design.md
-|   |   |-- Roadmap_System_Architecture_Design.md
-|   |   |-- Roadmap_Technical_Requirements.md
-|   |   |-- Roadmap_Toolchain_Selection.md
-|   |   |-- Toolchain_Selection_Category_Rules.md
-|   |   |-- Roadmap_Implementation_Architecture.md
-|   |   |-- Roadmap_Testing.md
-|   |   |-- Roadmap_Operation.md
-|   |   |-- Roadmap_Maintenance.md
-|   |   |-- Roadmap_System_Evolution.md
-|   |
 |   |-- 04_questionnaires/
-|   |   |-- Questionnaire_System_Design.md
-|   |   |-- Questionnaire_System_Architecture_Design.md
-|   |   |-- Questionnaire_Technical_Requirements.md
-|   |   |-- Questionnaire_Toolchain_Selection.md
-|   |   |-- Questionnaire_Implementation_Architecture.md
-|   |   |-- Questionnaire_Testing.md
-|   |   |-- Questionnaire_Operation.md
-|   |   |-- Questionnaire_Maintenance.md
-|   |   |-- Questionnaire_System_Evolution.md
-|   |
 |   |-- 05_encyclopedia/
-|   |   |-- Entities.md
-|   |   |-- Data.md
-|   |   |-- Rules.md
-|   |   |-- States.md
-|   |   |-- Events.md
-|   |   |-- Flows.md
-|   |   |-- Storage.md
-|   |   |-- Errors.md
-|   |   |-- Interfaces.md
-|   |   |-- Architecture.md
-|   |
 |   |-- 06_examples/
-|   |   |-- Scripts/
-|   |   |-- GUI/
-|   |   |-- Web/
-|   |   |-- Embedded/
-|   |   |-- PLC/
-|   |   |-- CNC_CAM/
-|   |   |-- Databases/
-|   |   |-- Integrations/
-|   |
 |   |-- 07_diagrams/
-|   |   |-- System_Map.md
-|   |   |-- Documentation_Map_Diagrams.md
-|   |   |-- Development_Route_Diagrams.md
-|   |
 |   |-- 08_books/
-|       |-- Book_01_Foundations.md
-|       |-- Book_02_System_Design.md
-|       |-- Book_03_System_Architecture_Design.md
-|       |-- Book_04_Technical_Requirements.md
-|       |-- Book_05_Toolchain_Selection.md
-|       |-- Book_06_Implementation_Architecture.md
-|       |-- Book_07_Testing.md
-|       |-- Book_08_Operation_Maintenance_Evolution.md
 ```
 
 ## 4. Слои документации
@@ -114,7 +58,7 @@ Programming-Digital-Systems
 
 Документы:
 
-- `PROJECT_SCOPE.md`
+- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
 
 ### 4.2. Агентный слой
 
@@ -122,7 +66,7 @@ Programming-Digital-Systems
 
 Документы:
 
-- `AGENTS.md`
+- [AGENTS.md](../../AGENTS.md)
 
 ### 4.3. Навигационный слой
 
@@ -130,10 +74,25 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/00_maps/Documentation_Map.md`
-- `docs/00_maps/Development_Route_Map.md`
-- `docs/00_maps/Knowledge_Layer_Map.md`
-- `docs/00_maps/Requirements_To_Toolchain_Map.md`
+- [Documentation Map](Documentation_Map.md)
+  - Передаёт: общую структуру базы знаний.
+  - Используется для: ориентации в документации.
+  - Ограничение: не заменяет подробные roadmap-документы.
+
+- [Development Route Map](Development_Route_Map.md)
+  - Передаёт: полный маршрут разработки.
+  - Используется для: движения от идеи до развития системы.
+  - Ограничение: не заменяет анкеты.
+
+- [Knowledge Layer Map](Knowledge_Layer_Map.md)
+  - Передаёт: карту слоёв знаний.
+  - Используется для: понимания назначения каждого слоя документации.
+  - Ограничение: не заменяет карту маршрута.
+
+- [Requirements To Toolchain Map](Requirements_To_Toolchain_Map.md)
+  - Передаёт: переход от технических требований к критериям выбора инструментария.
+  - Используется для: предотвращения прямого выбора инструмента без критериев.
+  - Ограничение: не заменяет документы требований и инструментария.
 
 ### 4.4. Регламентный слой
 
@@ -141,10 +100,25 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/01_regulations/Documentation_System_Regulation.md`
-- `docs/01_regulations/Document_Writing_Rules.md`
-- `docs/01_regulations/Link_Rules.md`
-- `docs/01_regulations/Diagram_Rules.md`
+- [Documentation System Regulation](../01_regulations/Documentation_System_Regulation.md)
+  - Передаёт: правила построения системы документации.
+  - Используется для: согласования структуры документов.
+  - Ограничение: не заменяет карту документации.
+
+- [Document Writing Rules](../01_regulations/Document_Writing_Rules.md)
+  - Передаёт: правила изложения и оформления.
+  - Используется для: исключения личного шума и мусора.
+  - Ограничение: не определяет маршрут разработки.
+
+- [Link Rules](../01_regulations/Link_Rules.md)
+  - Передаёт: правила рабочих Markdown-ссылок.
+  - Используется для: связывания документов между собой.
+  - Ограничение: не определяет содержание документов.
+
+- [Diagram Rules](../01_regulations/Diagram_Rules.md)
+  - Передаёт: правила использования диаграмм.
+  - Используется для: визуального объяснения структуры и связей.
+  - Ограничение: не заменяет текстовое содержание.
 
 ### 4.5. Шаблонный слой
 
@@ -152,8 +126,15 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/02_templates/Roadmap_Document_Template.md`
-- `docs/02_templates/Questionnaire_Document_Template.md`
+- [Roadmap Document Template](../02_templates/Roadmap_Document_Template.md)
+  - Передаёт: структуру roadmap-документов.
+  - Используется для: создания новых roadmap.
+  - Ограничение: не содержит содержание конкретного этапа.
+
+- [Questionnaire Document Template](../02_templates/Questionnaire_Document_Template.md)
+  - Передаёт: структуру анкет.
+  - Используется для: создания новых анкет.
+  - Ограничение: не содержит конкретные вопросы этапа.
 
 ### 4.6. Roadmap-слой
 
@@ -161,16 +142,55 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/03_roadmaps/Roadmap_System_Design.md`
-- `docs/03_roadmaps/Roadmap_System_Architecture_Design.md`
-- `docs/03_roadmaps/Roadmap_Technical_Requirements.md`
-- `docs/03_roadmaps/Roadmap_Toolchain_Selection.md`
-- `docs/03_roadmaps/Toolchain_Selection_Category_Rules.md`
-- `docs/03_roadmaps/Roadmap_Implementation_Architecture.md`
-- `docs/03_roadmaps/Roadmap_Testing.md`
-- `docs/03_roadmaps/Roadmap_Operation.md`
-- `docs/03_roadmaps/Roadmap_Maintenance.md`
-- `docs/03_roadmaps/Roadmap_System_Evolution.md`
+- [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
+  - Передаёт: проектирование сущностей, данных, правил, состояний, событий, потоков, хранения и ошибок.
+  - Используется для: первого проектного этапа после идеи и предметной области.
+  - Ограничение: не выбирает инструментарий.
+
+- [Roadmap: System Architecture Design](../03_roadmaps/Roadmap_System_Architecture_Design.md)
+  - Передаёт: проектирование слоёв, модулей, моделей, интерфейсов, зависимостей и точек расширения.
+  - Используется для: архитектурной организации системы.
+  - Ограничение: не подменяет архитектуру реализации.
+
+- [Roadmap: Technical Requirements](../03_roadmaps/Roadmap_Technical_Requirements.md)
+  - Передаёт: проверяемые технические условия.
+  - Используется для: подготовки критериев проверки и выбора инструментария.
+  - Ограничение: не выбирает инструменты.
+
+- [Roadmap: Toolchain Selection](../03_roadmaps/Roadmap_Toolchain_Selection.md)
+  - Передаёт: правила выбора базового, прикладного и специализированного инструментария.
+  - Используется для: выбора инструментов по требованиям и ограничениям.
+  - Ограничение: не меняет требования.
+
+- [Toolchain Selection Category Rules](../03_roadmaps/Toolchain_Selection_Category_Rules.md)
+  - Передаёт: условия применения категорий инструментария.
+  - Используется для: предотвращения ощущения, что PLC, embedded или CNC/CAM нужны каждому проекту.
+  - Ограничение: не выбирает конкретный инструмент.
+
+- [Roadmap: Implementation Architecture](../03_roadmaps/Roadmap_Implementation_Architecture.md)
+  - Передаёт: проектирование структуры проекта, модулей, адаптеров, конфигурации, логирования, тестов и зависимостей.
+  - Используется для: подготовки к коду.
+  - Ограничение: не пишет код.
+
+- [Roadmap: Testing](../03_roadmaps/Roadmap_Testing.md)
+  - Передаёт: правила проверки требований, модулей, интерфейсов, ошибок и сценариев.
+  - Используется для: подтверждения качества системы.
+  - Ограничение: не подменяет эксплуатацию.
+
+- [Roadmap: Operation](../03_roadmaps/Roadmap_Operation.md)
+  - Передаёт: правила запуска, рабочих сценариев, ошибок пользователя, логов и ограничений эксплуатации.
+  - Используется для: подготовки реального использования системы.
+  - Ограничение: не подменяет сопровождение.
+
+- [Roadmap: Maintenance](../03_roadmaps/Roadmap_Maintenance.md)
+  - Передаёт: правила регистрации дефектов, исправлений, регрессии, обновлений и журнала изменений.
+  - Используется для: сопровождения системы после эксплуатации.
+  - Ограничение: не подменяет развитие системы.
+
+- [Roadmap: System Evolution](../03_roadmaps/Roadmap_System_Evolution.md)
+  - Передаёт: правила анализа новых функций, новых сценариев, изменения требований, архитектуры и тестов.
+  - Используется для: развития системы без разрушения архитектуры.
+  - Ограничение: не маскирует дефекты как новые функции.
 
 ### 4.7. Анкетный слой
 
@@ -178,15 +198,17 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/04_questionnaires/Questionnaire_System_Design.md`
-- `docs/04_questionnaires/Questionnaire_System_Architecture_Design.md`
-- `docs/04_questionnaires/Questionnaire_Technical_Requirements.md`
-- `docs/04_questionnaires/Questionnaire_Toolchain_Selection.md`
-- `docs/04_questionnaires/Questionnaire_Implementation_Architecture.md`
-- `docs/04_questionnaires/Questionnaire_Testing.md`
-- `docs/04_questionnaires/Questionnaire_Operation.md`
-- `docs/04_questionnaires/Questionnaire_Maintenance.md`
-- `docs/04_questionnaires/Questionnaire_System_Evolution.md`
+- [Questionnaire: System Design](../04_questionnaires/Questionnaire_System_Design.md)
+- [Questionnaire: System Architecture Design](../04_questionnaires/Questionnaire_System_Architecture_Design.md)
+- [Questionnaire: Technical Requirements](../04_questionnaires/Questionnaire_Technical_Requirements.md)
+- [Questionnaire: Toolchain Selection](../04_questionnaires/Questionnaire_Toolchain_Selection.md)
+- [Questionnaire: Implementation Architecture](../04_questionnaires/Questionnaire_Implementation_Architecture.md)
+- [Questionnaire: Testing](../04_questionnaires/Questionnaire_Testing.md)
+- [Questionnaire: Operation](../04_questionnaires/Questionnaire_Operation.md)
+- [Questionnaire: Maintenance](../04_questionnaires/Questionnaire_Maintenance.md)
+- [Questionnaire: System Evolution](../04_questionnaires/Questionnaire_System_Evolution.md)
+
+Эти документы используются для практического заполнения проектных решений по этапам маршрута.
 
 ### 4.8. Энциклопедический слой
 
@@ -194,39 +216,45 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/05_encyclopedia/Entities.md`
-- `docs/05_encyclopedia/Data.md`
-- `docs/05_encyclopedia/Rules.md`
-- `docs/05_encyclopedia/States.md`
-- `docs/05_encyclopedia/Events.md`
-- `docs/05_encyclopedia/Flows.md`
-- `docs/05_encyclopedia/Storage.md`
-- `docs/05_encyclopedia/Errors.md`
-- `docs/05_encyclopedia/Interfaces.md`
-- `docs/05_encyclopedia/Architecture.md`
+- [Entities](../05_encyclopedia/Entities.md)
+- [Data](../05_encyclopedia/Data.md)
+- [Rules](../05_encyclopedia/Rules.md)
+- [States](../05_encyclopedia/States.md)
+- [Events](../05_encyclopedia/Events.md)
+- [Flows](../05_encyclopedia/Flows.md)
+- [Storage](../05_encyclopedia/Storage.md)
+- [Errors](../05_encyclopedia/Errors.md)
+- [Interfaces](../05_encyclopedia/Interfaces.md)
+- [Architecture](../05_encyclopedia/Architecture.md)
+
+Энциклопедия объясняет понятия, а roadmap ведёт пользователя по процессу.
 
 ### 4.9. Слой примеров
 
 Назначение слоя: показывать применение универсальных правил в разных областях цифровых систем.
 
-Категории:
+Документы:
 
-- Скрипты автоматизации
-  - Примеры: обработка файлов, генерация отчётов, парсинг данных.
-- GUI-приложения
-  - Примеры: настольная утилита, интерфейс оператора, редактор шаблонов.
-- Web-системы
-  - Примеры: API-сервис, личный кабинет, панель мониторинга.
-- Embedded-системы
-  - Примеры: контроллер датчиков, устройство сбора данных, управление клапанами.
-- PLC-системы
-  - Примеры: автоматический режим, аварийные межблокировки, управление технологическим процессом.
-- CNC/CAM-системы
-  - Примеры: постпроцессор, анализ NC-программ, контроль инструмента.
-- Базы данных
-  - Примеры: складской учёт, журнал измерений, история изменений.
-- Интеграционные системы
-  - Примеры: обмен между Excel и БД, обмен между PLC и GUI, REST API.
+- [Examples Index](../06_examples/Examples_Index.md)
+  - Передаёт: структуру категорий примеров.
+  - Используется для: выбора учебного примера.
+  - Ограничение: не заменяет сами примеры.
+
+- [Python File Processing Utility](../06_examples/Scripts/Python_File_Processing_Utility.md)
+  - Передаёт: первый полный учебный пример Python-утилиты обработки файлов.
+  - Используется для: демонстрации полного маршрута от идеи до развития.
+  - Ограничение: не является production-реализацией.
+
+Категории будущих примеров:
+
+- Scripts / Скрипты автоматизации.
+- GUI / Графические приложения.
+- Web / Web-системы.
+- Embedded / Встроенные системы.
+- PLC / Промышленная автоматизация.
+- CNC_CAM / CNC и CAM-системы.
+- Databases / Базы данных.
+- Integrations / Интеграционные системы.
 
 ### 4.10. Слой диаграмм
 
@@ -234,9 +262,9 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/07_diagrams/System_Map.md`
-- `docs/07_diagrams/Documentation_Map_Diagrams.md`
-- `docs/07_diagrams/Development_Route_Diagrams.md`
+- [System Map](../07_diagrams/System_Map.md)
+- [Documentation Map Diagrams](../07_diagrams/Documentation_Map_Diagrams.md)
+- [Development Route Diagrams](../07_diagrams/Development_Route_Diagrams.md)
 
 ### 4.11. Книжный слой
 
@@ -244,14 +272,14 @@ Programming-Digital-Systems
 
 Документы:
 
-- `docs/08_books/Book_01_Foundations.md`
-- `docs/08_books/Book_02_System_Design.md`
-- `docs/08_books/Book_03_System_Architecture_Design.md`
-- `docs/08_books/Book_04_Technical_Requirements.md`
-- `docs/08_books/Book_05_Toolchain_Selection.md`
-- `docs/08_books/Book_06_Implementation_Architecture.md`
-- `docs/08_books/Book_07_Testing.md`
-- `docs/08_books/Book_08_Operation_Maintenance_Evolution.md`
+- [Book 01: Foundations](../08_books/Book_01_Foundations.md)
+- [Book 02: System Design](../08_books/Book_02_System_Design.md)
+- [Book 03: System Architecture Design](../08_books/Book_03_System_Architecture_Design.md)
+- [Book 04: Technical Requirements](../08_books/Book_04_Technical_Requirements.md)
+- [Book 05: Toolchain Selection](../08_books/Book_05_Toolchain_Selection.md)
+- [Book 06: Implementation Architecture](../08_books/Book_06_Implementation_Architecture.md)
+- [Book 07: Testing](../08_books/Book_07_Testing.md)
+- [Book 08: Operation Maintenance Evolution](../08_books/Book_08_Operation_Maintenance_Evolution.md)
 
 ## 5. Главный маршрут разработки
 
@@ -286,124 +314,55 @@ flowchart TD
     R9[Roadmap System Evolution] --> Q9[Questionnaire System Evolution]
 ```
 
-## 7. Связь технических требований и инструментария
-
-```mermaid
-flowchart TD
-    A[Technical Requirements] --> B[Requirements To Toolchain Map]
-    B --> C[Toolchain Selection]
-    C --> D[Implementation Architecture]
-```
-
-## 8. Связь эксплуатации, сопровождения и развития
-
-```mermaid
-flowchart TD
-    A[Testing] --> B[Operation]
-    B --> C[Maintenance]
-    C --> D[System Evolution]
-    D --> E[System Design]
-    D --> F[Technical Requirements]
-    D --> G[System Architecture Design]
-    D --> H[Implementation Architecture]
-    D --> I[Testing]
-```
-
-## 9. Связь энциклопедии с проектированием
-
-```mermaid
-flowchart TD
-    E1[Entities] --> SD[System Design]
-    E2[Data] --> SD
-    E3[Rules] --> SD
-    E4[States] --> SD
-    E5[Events] --> SD
-    E6[Flows] --> SD
-    E7[Storage] --> SD
-    E8[Errors] --> SD
-    E9[Interfaces] --> SAD[System Architecture Design]
-    E10[Architecture] --> SAD
-    SD --> SAD
-    SAD --> TR[Technical Requirements]
-    TR --> TS[Toolchain Selection]
-    TS --> IA[Implementation Architecture]
-    IA --> TEST[Testing]
-    TEST --> OP[Operation]
-    OP --> MAINT[Maintenance]
-    MAINT --> EVO[System Evolution]
-```
-
-## 10. Правило расширения карты
-
-Карта документации должна обновляться при добавлении нового крупного документа, слоя или маршрута.
-
-Новый документ должен быть добавлен в карту, если он:
-
-- является частью маршрута разработки;
-- является регламентом;
-- является шаблоном;
-- является анкетой;
-- является энциклопедической статьёй;
-- является связующим документом между этапами;
-- содержит диаграмму общего назначения;
-- входит в структуру будущей книги или серии книг.
-
-## 11. Критерии завершения карты
+## 7. Критерии актуальности карты
 
 Карта считается актуальной, если:
 
 - перечислены все основные слои документации;
 - указаны главные документы каждого слоя;
+- документы оформлены рабочими Markdown-ссылками;
 - показан маршрут от идеи к реализации;
-- проектирование архитектуры системы выделено отдельным этапом;
 - технические требования отделены от выбора инструментария;
 - связь требований и инструментария вынесена в отдельный документ;
-- проектирование архитектуры реализации выделено отдельным этапом;
-- тестирование выделено отдельным этапом;
-- эксплуатация выделена отдельным этапом;
-- сопровождение выделено отдельным этапом;
-- развитие системы выделено отдельным этапом;
-- показана связь roadmap-документов и анкет;
-- показана связь энциклопедии с проектированием;
+- эксплуатация, сопровождение и развитие системы выделены отдельно;
 - новые документы не появляются вне карты.
 
-## 12. Связанные документы
+## 8. Связанные документы
 
 ### Входные документы
 
-- `PROJECT_SCOPE.md`
+- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
   - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
   - Используется для: построения общей карты базы знаний.
   - Ограничение: не описывает подробную структуру каждого слоя.
 
-- `AGENTS.md`
+- [AGENTS.md](../../AGENTS.md)
   - Передаёт: правила, которые AI-агент должен учитывать перед созданием и изменением документов.
   - Используется для: соблюдения структуры, маршрута и регламентов.
   - Ограничение: не заменяет карту документации.
 
-- `docs/01_regulations/Documentation_System_Regulation.md`
+- [Documentation System Regulation](../01_regulations/Documentation_System_Regulation.md)
   - Передаёт: правила построения системы документации.
   - Используется для: определения слоёв и связей документации.
   - Ограничение: не является навигационной картой.
 
 ### Выходные документы
 
-- `docs/00_maps/Development_Route_Map.md`
+- [Development Route Map](Development_Route_Map.md)
   - Получает: общий маршрут разработки.
   - Используется для: детального описания движения от идеи до сопровождения.
   - Ограничение: не должен дублировать всю карту документации.
 
-- `docs/00_maps/Knowledge_Layer_Map.md`
+- [Knowledge Layer Map](Knowledge_Layer_Map.md)
   - Получает: структуру слоёв базы знаний.
   - Используется для: детального описания энциклопедического, учебного, roadmap- и анкетного слоёв.
   - Ограничение: не должен заменять roadmap-документы.
 
-- `docs/00_maps/Requirements_To_Toolchain_Map.md`
+- [Requirements To Toolchain Map](Requirements_To_Toolchain_Map.md)
   - Получает: место связующего документа между требованиями и инструментарием.
   - Используется для: трассировки требований к критериям выбора инструментов.
   - Ограничение: не должен заменять документы требований и выбора инструментария.
 
-## 13. История изменений
+## 9. История изменений
 
-- Updated: добавлены `Requirements_To_Toolchain_Map.md`, `Toolchain_Selection_Category_Rules.md`, агентный слой и актуализирован маршрут до архитектуры реализации.
-- Updated: добавлены `Roadmap_Operation.md`, `Questionnaire_Operation.md`, `Roadmap_System_Evolution.md`, `Questionnaire_System_Evolution.md`; маршрут расширен до эксплуатации, сопровождения и развития системы.
+- Updated: документ приведён к рабочим Markdown-ссылкам вместо текстовых путей.
