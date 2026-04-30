@@ -257,11 +257,54 @@ Programming-Digital-Systems
 
 Назначение слоя: хранить крупные диаграммы и визуальные карты, которые используются несколькими документами.
 
-Документы:
+#### 4.10.1. Базовые диаграммы системы знаний
 
 - [[docs/07_diagrams/System_Map|System Map]]
+  - Передаёт: универсальную карту цифровой системы.
+  - Используется для: понимания связей между сущностями, данными, правилами, архитектурой, требованиями, инструментарием и жизненным циклом.
+  - Ограничение: не заменяет энциклопедию и roadmap-документы.
+
 - [[docs/07_diagrams/Documentation_Map_Diagrams|Documentation Map Diagrams]]
+  - Передаёт: визуальную структуру базы знаний и слоёв документации.
+  - Используется для: навигации по документации.
+  - Ограничение: не заменяет [[docs/00_maps/Documentation_Map|Documentation Map]].
+
 - [[docs/07_diagrams/Development_Route_Diagrams|Development Route Diagrams]]
+  - Передаёт: визуальный маршрут разработки от идеи до развития системы.
+  - Используется для: понимания переходов, возвратов и запрещённых переходов.
+  - Ограничение: не заменяет [[docs/00_maps/Development_Route_Map|Development Route Map]].
+
+#### 4.10.2. Диаграммы roadmap-этапов
+
+- [[docs/07_diagrams/Roadmap_System_Design_Diagrams|Roadmap System Design Diagrams]]
+  - Передаёт: диаграммы проектирования системы.
+  - Используется для: визуального понимания границы системы, сущностей, данных, правил, состояний, событий, потоков, хранения и ошибок.
+  - Ограничение: не заменяет [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]].
+
+- [[docs/07_diagrams/Roadmap_System_Architecture_Diagrams|Roadmap System Architecture Diagrams]]
+  - Передаёт: диаграммы архитектуры системы.
+  - Используется для: визуального понимания слоёв, модулей, моделей, интерфейсов, зависимостей, конфигураций и точек расширения.
+  - Ограничение: не заменяет [[docs/03_roadmaps/Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]].
+
+- [[docs/07_diagrams/Roadmap_Technical_Requirements_Diagrams|Roadmap Technical Requirements Diagrams]]
+  - Передаёт: диаграммы технических требований.
+  - Используется для: визуального понимания источников требований, классификации, жизненного цикла требования и связи с выбором инструментария.
+  - Ограничение: не заменяет [[docs/03_roadmaps/Roadmap_Technical_Requirements|Roadmap: Technical Requirements]].
+
+- [[docs/07_diagrams/Roadmap_Toolchain_Selection_Diagrams|Roadmap Toolchain Selection Diagrams]]
+  - Передаёт: диаграммы выбора инструментария.
+  - Используется для: визуального понимания базового, прикладного и специализированного инструментария, условий применения и процесса выбора.
+  - Ограничение: не заменяет [[docs/03_roadmaps/Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]].
+
+- [[docs/07_diagrams/Roadmap_Implementation_Architecture_Diagrams|Roadmap Implementation Architecture Diagrams]]
+  - Передаёт: диаграммы архитектуры реализации.
+  - Используется для: визуального понимания структуры проекта, модулей реализации, точек входа, адаптеров, конфигурации, ошибок, логирования, тестов и зависимостей.
+  - Ограничение: не заменяет [[docs/03_roadmaps/Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]].
+
+- [[docs/07_diagrams/Roadmap_Testing_Operation_Maintenance_Evolution_Diagrams|Roadmap Testing Operation Maintenance Evolution Diagrams]]
+  - Передаёт: диаграммы тестирования, эксплуатации, сопровождения и развития системы.
+  - Используется для: визуального понимания жизненного цикла после реализации, возвратов и разделения сопровождения и развития.
+  - Ограничение: не заменяет roadmap-документы тестирования, эксплуатации, сопровождения и развития.
 
 ### 4.11. Книжный слой
 
@@ -322,6 +365,7 @@ flowchart TD
 - технические требования отделены от выбора инструментария;
 - связь требований и инструментария вынесена в отдельный документ;
 - эксплуатация, сопровождение и развитие системы выделены отдельно;
+- слой диаграмм содержит базовые диаграммы и диаграммы roadmap-этапов;
 - новые документы не появляются вне карты.
 
 ## 8. Связанные документы
@@ -363,3 +407,4 @@ flowchart TD
 ## 9. История изменений
 
 - Updated: документ приведён к рабочим Obsidian wikilinks вместо текстовых путей и Markdown-only ссылок.
+- Updated: слой диаграмм дополнен базовыми диаграммами системы знаний и диаграммами roadmap-этапов.
