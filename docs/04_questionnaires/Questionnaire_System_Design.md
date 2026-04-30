@@ -2,7 +2,7 @@
 
 ## 1. Назначение анкеты
 
-`Questionnaire_System_Design.md` превращает `Roadmap_System_Design.md` в последовательность вопросов для проектирования конкретной цифровой системы.
+`Questionnaire_System_Design.md` превращает [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]] в последовательность вопросов для проектирования конкретной цифровой системы.
 
 Анкета должна помочь пользователю последовательно определить:
 
@@ -22,7 +22,7 @@
 
 ## 2. Связанный roadmap-документ
 
-- `docs/03_roadmaps/Roadmap_System_Design.md`
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
   - Передаёт: порядок проектирования системы.
   - Используется для: построения вопросов анкеты.
   - Ограничение: анкета должна фиксировать ответы пользователя, а не заменять roadmap-документ.
@@ -76,8 +76,8 @@
 
 ### Связанные документы
 
-- `PROJECT_SCOPE.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#1. Назначение документа`.
+- [[PROJECT_SCOPE|PROJECT_SCOPE]].
+- [[docs/03_roadmaps/Roadmap_System_Design#1. Назначение документа|Roadmap: System Design — назначение документа]].
 
 ### Следующий шаг
 
@@ -114,7 +114,7 @@
 
 ### Связанные документы
 
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.1. Шаг 1. Определить границу системы`.
+- [[docs/03_roadmaps/Roadmap_System_Design#7.1. Шаг 1. Определить границу системы|Шаг 1. Определить границу системы]].
 
 ### Следующий шаг
 
@@ -157,8 +157,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Entities.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.2. Шаг 2. Определить сущности`.
+- [[docs/05_encyclopedia/Entities|Entities]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.2. Шаг 2. Определить сущности|Шаг 2. Определить сущности]].
 
 ### Следующий шаг
 
@@ -208,8 +208,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Data.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.3. Шаг 3. Определить данные`.
+- [[docs/05_encyclopedia/Data|Data]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.3. Шаг 3. Определить данные|Шаг 3. Определить данные]].
 
 ### Следующий шаг
 
@@ -260,8 +260,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Rules.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.4. Шаг 4. Определить правила`.
+- [[docs/05_encyclopedia/Rules|Rules]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.4. Шаг 4. Определить правила|Шаг 4. Определить правила]].
 
 ### Следующий шаг
 
@@ -310,8 +310,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/States.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.5. Шаг 5. Определить состояния`.
+- [[docs/05_encyclopedia/States|States]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.5. Шаг 5. Определить состояния|Шаг 5. Определить состояния]].
 
 ### Следующий шаг
 
@@ -361,8 +361,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Events.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.6. Шаг 6. Определить события`.
+- [[docs/05_encyclopedia/Events|Events]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.6. Шаг 6. Определить события|Шаг 6. Определить события]].
 
 ### Следующий шаг
 
@@ -412,8 +412,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Flows.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.7. Шаг 7. Определить потоки`.
+- [[docs/05_encyclopedia/Flows|Flows]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.7. Шаг 7. Определить потоки|Шаг 7. Определить потоки]].
 
 ### Следующий шаг
 
@@ -464,8 +464,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Storage.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.8. Шаг 8. Определить хранение`.
+- [[docs/05_encyclopedia/Storage|Storage]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.8. Шаг 8. Определить хранение|Шаг 8. Определить хранение]].
 
 ### Следующий шаг
 
@@ -519,8 +519,8 @@
 
 ### Связанные документы
 
-- `docs/05_encyclopedia/Errors.md`.
-- `docs/03_roadmaps/Roadmap_System_Design.md#7.9. Шаг 9. Определить ошибки`.
+- [[docs/05_encyclopedia/Errors|Errors]].
+- [[docs/03_roadmaps/Roadmap_System_Design#7.9. Шаг 9. Определить ошибки|Шаг 9. Определить ошибки]].
 
 ### Следующий шаг
 
@@ -528,7 +528,7 @@
 
 ## 6. Контроль полноты ответов
 
-Анкета считается заполненной достаточно для перехода к проектированию архитектуры системы, если:
+Анкета считается заполненной достаточно для перехода к [[docs/03_roadmaps/Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]], если:
 
 - определена граница системы;
 - определены внешние участники;
@@ -542,7 +542,7 @@
 - определены ошибки;
 - открытые вопросы вынесены отдельно;
 - ответы не содержат выбора инструментов реализации;
-- ответы можно использовать в `Roadmap_System_Architecture_Design.md`.
+- ответы можно использовать в [[docs/03_roadmaps/Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]].
 
 ## 7. Выходные данные анкеты
 
@@ -560,7 +560,7 @@
 - список хранимых данных;
 - список ошибок;
 - список открытых вопросов;
-- входные данные для анкеты архитектуры системы.
+- входные данные для [[docs/04_questionnaires/Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
 
 ## 8. Открытые вопросы
 
@@ -583,3 +583,4 @@ Q-OPEN-003:
 ## 9. История изменений
 
 - Initial version: создана анкета проектирования системы.
+- Updated: документ приведён к Obsidian wikilinks.
