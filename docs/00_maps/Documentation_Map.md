@@ -25,12 +25,15 @@ Programming-Digital-Systems
 |
 |-- PROJECT_SCOPE.md
 |
+|-- AGENTS.md
+|
 |-- docs/
 |   |
 |   |-- 00_maps/
 |   |   |-- Documentation_Map.md
 |   |   |-- Development_Route_Map.md
 |   |   |-- Knowledge_Layer_Map.md
+|   |   |-- Requirements_To_Toolchain_Map.md
 |   |
 |   |-- 01_regulations/
 |   |   |-- Documentation_System_Regulation.md
@@ -47,6 +50,7 @@ Programming-Digital-Systems
 |   |   |-- Roadmap_System_Architecture_Design.md
 |   |   |-- Roadmap_Technical_Requirements.md
 |   |   |-- Roadmap_Toolchain_Selection.md
+|   |   |-- Toolchain_Selection_Category_Rules.md
 |   |   |-- Roadmap_Implementation_Architecture.md
 |   |   |-- Roadmap_Testing.md
 |   |   |-- Roadmap_Maintenance.md
@@ -106,7 +110,15 @@ Programming-Digital-Systems
 
 - `PROJECT_SCOPE.md`
 
-### 4.2. Навигационный слой
+### 4.2. Агентный слой
+
+Назначение слоя: определить, какие документы и правила должен учитывать AI-агент при создании и изменении документации.
+
+Документы:
+
+- `AGENTS.md`
+
+### 4.3. Навигационный слой
 
 Назначение слоя: показывать карту базы знаний и маршруты движения пользователя.
 
@@ -115,8 +127,9 @@ Programming-Digital-Systems
 - `docs/00_maps/Documentation_Map.md`
 - `docs/00_maps/Development_Route_Map.md`
 - `docs/00_maps/Knowledge_Layer_Map.md`
+- `docs/00_maps/Requirements_To_Toolchain_Map.md`
 
-### 4.3. Регламентный слой
+### 4.4. Регламентный слой
 
 Назначение слоя: определить правила создания, оформления, связывания и визуализации документов.
 
@@ -127,7 +140,7 @@ Programming-Digital-Systems
 - `docs/01_regulations/Link_Rules.md`
 - `docs/01_regulations/Diagram_Rules.md`
 
-### 4.4. Шаблонный слой
+### 4.5. Шаблонный слой
 
 Назначение слоя: задать единую структуру будущих документов.
 
@@ -136,7 +149,7 @@ Programming-Digital-Systems
 - `docs/02_templates/Roadmap_Document_Template.md`
 - `docs/02_templates/Questionnaire_Document_Template.md`
 
-### 4.5. Roadmap-слой
+### 4.6. Roadmap-слой
 
 Назначение слоя: вести пользователя по этапам проектирования и разработки.
 
@@ -146,11 +159,12 @@ Programming-Digital-Systems
 - `docs/03_roadmaps/Roadmap_System_Architecture_Design.md`
 - `docs/03_roadmaps/Roadmap_Technical_Requirements.md`
 - `docs/03_roadmaps/Roadmap_Toolchain_Selection.md`
+- `docs/03_roadmaps/Toolchain_Selection_Category_Rules.md`
 - `docs/03_roadmaps/Roadmap_Implementation_Architecture.md`
 - `docs/03_roadmaps/Roadmap_Testing.md`
 - `docs/03_roadmaps/Roadmap_Maintenance.md`
 
-### 4.6. Анкетный слой
+### 4.7. Анкетный слой
 
 Назначение слоя: превращать правила roadmap-документов в последовательность вопросов.
 
@@ -164,7 +178,7 @@ Programming-Digital-Systems
 - `docs/04_questionnaires/Questionnaire_Testing.md`
 - `docs/04_questionnaires/Questionnaire_Maintenance.md`
 
-### 4.7. Энциклопедический слой
+### 4.8. Энциклопедический слой
 
 Назначение слоя: раскрывать универсальные понятия цифрового мира.
 
@@ -181,7 +195,7 @@ Programming-Digital-Systems
 - `docs/05_encyclopedia/Interfaces.md`
 - `docs/05_encyclopedia/Architecture.md`
 
-### 4.8. Слой примеров
+### 4.9. Слой примеров
 
 Назначение слоя: показывать применение универсальных правил в разных областях цифровых систем.
 
@@ -204,7 +218,7 @@ Programming-Digital-Systems
 - Интеграционные системы
   - Примеры: обмен между Excel и БД, обмен между PLC и GUI, REST API.
 
-### 4.9. Слой диаграмм
+### 4.10. Слой диаграмм
 
 Назначение слоя: хранить крупные диаграммы и визуальные карты, которые используются несколькими документами.
 
@@ -214,7 +228,7 @@ Programming-Digital-Systems
 - `docs/07_diagrams/Documentation_Map_Diagrams.md`
 - `docs/07_diagrams/Development_Route_Diagrams.md`
 
-### 4.10. Книжный слой
+### 4.11. Книжный слой
 
 Назначение слоя: подготовить базу знаний к формату книги или серии книг.
 
@@ -234,13 +248,14 @@ flowchart TD
     A[Идея системы] --> B[Проектирование системы]
     B --> C[Проектирование архитектуры системы]
     C --> D[Технические требования]
-    D --> E[Выбор инструментария]
-    E --> F[Архитектура реализации]
-    F --> G[Код]
-    G --> H[Тестирование]
-    H --> I[Эксплуатация]
-    I --> J[Сопровождение]
-    J --> K[Развитие]
+    D --> E[Связь требований с критериями выбора]
+    E --> F[Выбор инструментария]
+    F --> G[Архитектура реализации]
+    G --> H[Код]
+    H --> I[Тестирование]
+    I --> J[Эксплуатация]
+    J --> K[Сопровождение]
+    K --> L[Развитие]
 ```
 
 ## 6. Связь roadmap-документов и анкет
@@ -256,7 +271,16 @@ flowchart TD
     R7[Roadmap Maintenance] --> Q7[Questionnaire Maintenance]
 ```
 
-## 7. Связь энциклопедии с проектированием
+## 7. Связь технических требований и инструментария
+
+```mermaid
+flowchart TD
+    A[Technical Requirements] --> B[Requirements To Toolchain Map]
+    B --> C[Toolchain Selection]
+    C --> D[Implementation Architecture]
+```
+
+## 8. Связь энциклопедии с проектированием
 
 ```mermaid
 flowchart TD
@@ -268,11 +292,15 @@ flowchart TD
     E6[Flows] --> SD
     E7[Storage] --> SD
     E8[Errors] --> SD
-    SD --> SAD[System Architecture Design]
+    E9[Interfaces] --> SAD[System Architecture Design]
+    E10[Architecture] --> SAD
+    SD --> SAD
     SAD --> TR[Technical Requirements]
+    TR --> TS[Toolchain Selection]
+    TS --> IA[Implementation Architecture]
 ```
 
-## 8. Правило расширения карты
+## 9. Правило расширения карты
 
 Карта документации должна обновляться при добавлении нового крупного документа, слоя или маршрута.
 
@@ -283,10 +311,11 @@ flowchart TD
 - является шаблоном;
 - является анкетой;
 - является энциклопедической статьёй;
+- является связующим документом между этапами;
 - содержит диаграмму общего назначения;
 - входит в структуру будущей книги или серии книг.
 
-## 9. Критерии завершения карты
+## 10. Критерии завершения карты
 
 Карта считается актуальной, если:
 
@@ -294,11 +323,14 @@ flowchart TD
 - указаны главные документы каждого слоя;
 - показан маршрут от идеи к реализации;
 - проектирование архитектуры системы выделено отдельным этапом;
+- технические требования отделены от выбора инструментария;
+- связь требований и инструментария вынесена в отдельный документ;
+- проектирование архитектуры реализации выделено отдельным этапом;
 - показана связь roadmap-документов и анкет;
 - показана связь энциклопедии с проектированием;
 - новые документы не появляются вне карты.
 
-## 10. Связанные документы
+## 11. Связанные документы
 
 ### Входные документы
 
@@ -306,6 +338,11 @@ flowchart TD
   - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
   - Используется для: построения общей карты базы знаний.
   - Ограничение: не описывает подробную структуру каждого слоя.
+
+- `AGENTS.md`
+  - Передаёт: правила, которые AI-агент должен учитывать перед созданием и изменением документов.
+  - Используется для: соблюдения структуры, маршрута и регламентов.
+  - Ограничение: не заменяет карту документации.
 
 - `docs/01_regulations/Documentation_System_Regulation.md`
   - Передаёт: правила построения системы документации.
@@ -323,3 +360,12 @@ flowchart TD
   - Получает: структуру слоёв базы знаний.
   - Используется для: детального описания энциклопедического, учебного, roadmap- и анкетного слоёв.
   - Ограничение: не должен заменять roadmap-документы.
+
+- `docs/00_maps/Requirements_To_Toolchain_Map.md`
+  - Получает: место связующего документа между требованиями и инструментарием.
+  - Используется для: трассировки требований к критериям выбора инструментов.
+  - Ограничение: не должен заменять документы требований и выбора инструментария.
+
+## 12. История изменений
+
+- Updated: добавлены `Requirements_To_Toolchain_Map.md`, `Toolchain_Selection_Category_Rules.md`, агентный слой и актуализирован маршрут до архитектуры реализации.
