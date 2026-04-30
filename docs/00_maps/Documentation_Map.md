@@ -44,6 +44,7 @@ Programming-Digital-Systems
 |   |
 |   |-- 03_roadmaps/
 |   |   |-- Roadmap_System_Design.md
+|   |   |-- Roadmap_System_Architecture_Design.md
 |   |   |-- Roadmap_Technical_Requirements.md
 |   |   |-- Roadmap_Toolchain_Selection.md
 |   |   |-- Roadmap_Implementation_Architecture.md
@@ -52,6 +53,7 @@ Programming-Digital-Systems
 |   |
 |   |-- 04_questionnaires/
 |   |   |-- Questionnaire_System_Design.md
+|   |   |-- Questionnaire_System_Architecture_Design.md
 |   |   |-- Questionnaire_Technical_Requirements.md
 |   |   |-- Questionnaire_Toolchain_Selection.md
 |   |   |-- Questionnaire_Implementation_Architecture.md
@@ -88,9 +90,10 @@ Programming-Digital-Systems
 |   |-- 08_books/
 |       |-- Book_01_Foundations.md
 |       |-- Book_02_System_Design.md
-|       |-- Book_03_Technical_Requirements.md
-|       |-- Book_04_Toolchain_Selection.md
-|       |-- Book_05_Implementation_Architecture.md
+|       |-- Book_03_System_Architecture_Design.md
+|       |-- Book_04_Technical_Requirements.md
+|       |-- Book_05_Toolchain_Selection.md
+|       |-- Book_06_Implementation_Architecture.md
 ```
 
 ## 4. Слои документации
@@ -140,6 +143,7 @@ Programming-Digital-Systems
 Документы:
 
 - `docs/03_roadmaps/Roadmap_System_Design.md`
+- `docs/03_roadmaps/Roadmap_System_Architecture_Design.md`
 - `docs/03_roadmaps/Roadmap_Technical_Requirements.md`
 - `docs/03_roadmaps/Roadmap_Toolchain_Selection.md`
 - `docs/03_roadmaps/Roadmap_Implementation_Architecture.md`
@@ -153,6 +157,7 @@ Programming-Digital-Systems
 Документы:
 
 - `docs/04_questionnaires/Questionnaire_System_Design.md`
+- `docs/04_questionnaires/Questionnaire_System_Architecture_Design.md`
 - `docs/04_questionnaires/Questionnaire_Technical_Requirements.md`
 - `docs/04_questionnaires/Questionnaire_Toolchain_Selection.md`
 - `docs/04_questionnaires/Questionnaire_Implementation_Architecture.md`
@@ -217,23 +222,25 @@ Programming-Digital-Systems
 
 - `docs/08_books/Book_01_Foundations.md`
 - `docs/08_books/Book_02_System_Design.md`
-- `docs/08_books/Book_03_Technical_Requirements.md`
-- `docs/08_books/Book_04_Toolchain_Selection.md`
-- `docs/08_books/Book_05_Implementation_Architecture.md`
+- `docs/08_books/Book_03_System_Architecture_Design.md`
+- `docs/08_books/Book_04_Technical_Requirements.md`
+- `docs/08_books/Book_05_Toolchain_Selection.md`
+- `docs/08_books/Book_06_Implementation_Architecture.md`
 
 ## 5. Главный маршрут разработки
 
 ```mermaid
 flowchart TD
     A[Идея системы] --> B[Проектирование системы]
-    B --> C[Технические требования]
-    C --> D[Выбор инструментария]
-    D --> E[Архитектура реализации]
-    E --> F[Код]
-    F --> G[Тестирование]
-    G --> H[Эксплуатация]
-    H --> I[Сопровождение]
-    I --> J[Развитие]
+    B --> C[Проектирование архитектуры системы]
+    C --> D[Технические требования]
+    D --> E[Выбор инструментария]
+    E --> F[Архитектура реализации]
+    F --> G[Код]
+    G --> H[Тестирование]
+    H --> I[Эксплуатация]
+    I --> J[Сопровождение]
+    J --> K[Развитие]
 ```
 
 ## 6. Связь roadmap-документов и анкет
@@ -241,11 +248,12 @@ flowchart TD
 ```mermaid
 flowchart TD
     R1[Roadmap System Design] --> Q1[Questionnaire System Design]
-    R2[Roadmap Technical Requirements] --> Q2[Questionnaire Technical Requirements]
-    R3[Roadmap Toolchain Selection] --> Q3[Questionnaire Toolchain Selection]
-    R4[Roadmap Implementation Architecture] --> Q4[Questionnaire Implementation Architecture]
-    R5[Roadmap Testing] --> Q5[Questionnaire Testing]
-    R6[Roadmap Maintenance] --> Q6[Questionnaire Maintenance]
+    R2[Roadmap System Architecture Design] --> Q2[Questionnaire System Architecture Design]
+    R3[Roadmap Technical Requirements] --> Q3[Questionnaire Technical Requirements]
+    R4[Roadmap Toolchain Selection] --> Q4[Questionnaire Toolchain Selection]
+    R5[Roadmap Implementation Architecture] --> Q5[Questionnaire Implementation Architecture]
+    R6[Roadmap Testing] --> Q6[Questionnaire Testing]
+    R7[Roadmap Maintenance] --> Q7[Questionnaire Maintenance]
 ```
 
 ## 7. Связь энциклопедии с проектированием
@@ -260,7 +268,8 @@ flowchart TD
     E6[Flows] --> SD
     E7[Storage] --> SD
     E8[Errors] --> SD
-    SD --> TR[Technical Requirements]
+    SD --> SAD[System Architecture Design]
+    SAD --> TR[Technical Requirements]
 ```
 
 ## 8. Правило расширения карты
@@ -284,6 +293,7 @@ flowchart TD
 - перечислены все основные слои документации;
 - указаны главные документы каждого слоя;
 - показан маршрут от идеи к реализации;
+- проектирование архитектуры системы выделено отдельным этапом;
 - показана связь roadmap-документов и анкет;
 - показана связь энциклопедии с проектированием;
 - новые документы не появляются вне карты.
@@ -293,7 +303,7 @@ flowchart TD
 ### Входные документы
 
 - `PROJECT_SCOPE.md`
-  - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения.
+  - Передаёт: масштаб проекта, центральную формулу цифровой системы, области применения и разделение уровней проектирования.
   - Используется для: построения общей карты базы знаний.
   - Ограничение: не описывает подробную структуру каждого слоя.
 
