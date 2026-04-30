@@ -4,6 +4,8 @@
 
 `Link_Rules.md` определяет правила построения рабочих ссылок между документами проекта Programming Digital Systems.
 
+Документация проекта ведётся как база знаний для Obsidian, поэтому основной внутренний формат ссылок должен работать в Obsidian и отображаться в Graph view.
+
 Ссылки нужны для того, чтобы пользователь видел:
 
 - откуда появляется информация;
@@ -14,7 +16,7 @@
 
 ## 2. Главный принцип
 
-В GitHub-документации ссылка должна быть рабочей Markdown-ссылкой.
+Основной формат внутренних ссылок проекта — Obsidian wikilink.
 
 Недостаточно написать путь как текст или как inline-code.
 
@@ -27,73 +29,91 @@
 Правильно:
 
 ```md
-- [Roadmap: Technical Requirements](../03_roadmaps/Roadmap_Technical_Requirements.md)
+- [[docs/03_roadmaps/Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
 ```
 
-Если документ находится в другой папке, путь должен быть относительным от текущего документа.
+Markdown-ссылка допускается только как дополнительный формат для GitHub, но не как основной формат внутренней ссылки.
 
-## 3. Приоритет форматов ссылок
+## 3. Основной формат ссылок
 
-### 3.1. Основной формат: Markdown-ссылка
-
-Основной формат для всех документов проекта:
+### 3.1. Ссылка на документ
 
 ```md
-[Название документа](../relative/path/to/document.md)
+[[docs/path/to/document|Читаемое имя документа]]
 ```
 
-Пример из папки `docs/00_maps/`:
+Примеры:
+
+```md
+[[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
+```
+
+```md
+[[docs/04_questionnaires/Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
+```
+
+Путь указывается от корня Obsidian vault / репозитория.
+
+Расширение `.md` внутри wikilink не используется.
+
+### 3.2. Ссылка на раздел документа
+
+```md
+[[docs/03_roadmaps/Roadmap_Technical_Requirements#7.1. Требования к данным|Требования к данным]]
+```
+
+Если заголовок может измениться, лучше сослаться на документ целиком и рядом текстом указать нужный раздел.
+
+### 3.3. Ссылка на документ в корне репозитория
+
+```md
+[[PROJECT_SCOPE|PROJECT_SCOPE]]
+```
+
+```md
+[[AGENTS|AGENTS]]
+```
+
+## 4. Дополнительный формат для GitHub
+
+Markdown-ссылка может использоваться дополнительно, если документ должен быть удобен в GitHub:
 
 ```md
 [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
 ```
 
-Пример из папки `docs/03_roadmaps/`:
+Но Markdown-ссылка не заменяет Obsidian wikilink.
+
+Рекомендуемый комбинированный формат:
 
 ```md
-[Questionnaire: Technical Requirements](../04_questionnaires/Questionnaire_Technical_Requirements.md)
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
+  - GitHub: [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
+  - Передаёт: сущности, данные, правила, состояния, события, потоки, хранение и ошибки.
 ```
 
-### 3.2. Ссылка на раздел документа
+Для обычных рабочих документов достаточно Obsidian wikilink.
 
-Для ссылки на раздел используется anchor GitHub Markdown.
-
-```md
-[Требования к данным](../03_roadmaps/Roadmap_Technical_Requirements.md#71-требования-к-данным)
-```
-
-Правило: если есть сомнение в точном anchor, лучше сослаться на документ целиком и указать раздел текстом рядом.
-
-### 3.3. Obsidian-ссылка
-
-Obsidian-ссылки допускаются только как дополнительный локальный формат, если документ специально предназначен для Obsidian.
-
-```md
-[[Roadmap Technical Requirements]]
-```
-
-Obsidian-ссылка не заменяет Markdown-ссылку в GitHub-документации.
-
-## 4. Обязательное описание связи
+## 5. Обязательное описание связи
 
 Ссылка должна объяснять смысл связи.
 
 Неправильно:
 
 ```md
-- [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
 ```
 
 Правильно:
 
 ```md
-- [Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
+- [[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
   - Передаёт: сущности, данные, правила, состояния, события, потоки, хранение и ошибки.
   - Используется для: подготовки архитектуры системы и технических требований.
   - Ограничение: не выбирает инструментарий реализации.
 ```
 
-## 5. Раздел связанных документов
+## 6. Раздел связанных документов
 
 Каждый крупный документ должен иметь раздел `Связанные документы`, если он зависит от других документов или передаёт данные дальше.
 
@@ -104,98 +124,56 @@ Obsidian-ссылка не заменяет Markdown-ссылку в GitHub-до
 
 ### Входные документы
 
-- [Название документа](../relative/path/document.md)
+- [[docs/path/Input_Document|Input Document]]
   - Передаёт:
   - Используется для:
   - Ограничение:
 
 ### Выходные документы
 
-- [Название документа](../relative/path/document.md)
+- [[docs/path/Output_Document|Output Document]]
   - Получает:
   - Используется для:
   - Ограничение:
 ```
 
-## 6. Правила относительных путей
+## 7. Примеры путей
 
-### 6.1. Ссылка из `docs/00_maps/`
-
-На roadmap:
+### 7.1. Карты
 
 ```md
-[Roadmap: Testing](../03_roadmaps/Roadmap_Testing.md)
+[[docs/00_maps/Documentation_Map|Documentation Map]]
 ```
-
-На анкету:
 
 ```md
-[Questionnaire: Testing](../04_questionnaires/Questionnaire_Testing.md)
+[[docs/00_maps/Development_Route_Map|Development Route Map]]
 ```
 
-На энциклопедию:
+### 7.2. Roadmap
 
 ```md
-[Errors](../05_encyclopedia/Errors.md)
+[[docs/03_roadmaps/Roadmap_Testing|Roadmap: Testing]]
 ```
 
-### 6.2. Ссылка из `docs/03_roadmaps/`
-
-На карту:
+### 7.3. Анкеты
 
 ```md
-[Development Route Map](../00_maps/Development_Route_Map.md)
+[[docs/04_questionnaires/Questionnaire_Operation|Questionnaire: Operation]]
 ```
 
-На анкету:
+### 7.4. Энциклопедия
 
 ```md
-[Questionnaire: Operation](../04_questionnaires/Questionnaire_Operation.md)
+[[docs/05_encyclopedia/Errors|Errors]]
 ```
 
-На другой roadmap:
+### 7.5. Примеры
 
 ```md
-[Roadmap: Testing](Roadmap_Testing.md)
+[[docs/06_examples/Scripts/Python_File_Processing_Utility|Python File Processing Utility]]
 ```
 
-### 6.3. Ссылка из `docs/04_questionnaires/`
-
-На roadmap:
-
-```md
-[Roadmap: Operation](../03_roadmaps/Roadmap_Operation.md)
-```
-
-На карту:
-
-```md
-[Documentation Map](../00_maps/Documentation_Map.md)
-```
-
-### 6.4. Ссылка из `docs/06_examples/`
-
-На roadmap:
-
-```md
-[Roadmap: System Design](../03_roadmaps/Roadmap_System_Design.md)
-```
-
-### 6.5. Ссылка из `docs/06_examples/Scripts/`
-
-На roadmap:
-
-```md
-[Roadmap: System Design](../../03_roadmaps/Roadmap_System_Design.md)
-```
-
-На индекс примеров:
-
-```md
-[Examples Index](../Examples_Index.md)
-```
-
-## 7. Идентификаторы блоков
+## 8. Идентификаторы блоков
 
 Для большой базы знаний заголовков недостаточно.
 
@@ -215,56 +193,68 @@ Obsidian-ссылка не заменяет Markdown-ссылку в GitHub-до
 - `BUG-...` — дефект;
 - `EVO-...` — запрос развития.
 
-Пример:
-
-```md
-## REQ-DATA-001. Требование к входным данным
-```
-
-## 8. Запрещённые ссылки
+## 9. Запрещённые ссылки
 
 Запрещены:
 
-- пути к документам без Markdown-ссылки;
+- пути к документам без Obsidian wikilink;
+- inline-code вместо ссылки на документ;
 - ссылки без объяснения назначения;
 - ссылки ради количества;
 - ссылки на документы, которые не влияют на текущий текст;
 - ссылки на будущие документы без указания их планируемой роли;
-- дублирование одной и той же связи в разных формулировках;
-- использование Obsidian-ссылки как единственной ссылки в GitHub-документе.
+- Markdown-ссылка как единственный формат внутренней ссылки в документах, предназначенных для Obsidian.
 
-## 9. Проверка качества ссылок
+## 10. Проверка качества ссылок
 
 Перед завершением документа нужно проверить:
 
-1. Все связанные документы оформлены как Markdown-ссылки.
-2. Пути являются относительными.
-3. Ссылка открывается из текущего расположения файла.
+1. Внутренние документы оформлены как Obsidian wikilinks.
+2. Путь в wikilink указан от корня vault / репозитория.
+3. Расширение `.md` внутри wikilink не используется.
 4. У ссылки есть объяснение связи.
 5. Inline-code используется только для имён файлов, команд или терминов, но не вместо ссылки.
+6. Если документ должен быть удобен в GitHub, Markdown-ссылка добавлена дополнительно, но не вместо wikilink.
 
-## 10. Связанные документы
+## 11. Влияние на Graph view Obsidian
 
-- [PROJECT_SCOPE.md](../../PROJECT_SCOPE.md)
+Obsidian Graph view строит связи между заметками на основе внутренних ссылок.
+
+Поэтому для проектной базы знаний предпочтительны wikilinks:
+
+```md
+[[docs/03_roadmaps/Roadmap_System_Design|Roadmap: System Design]]
+```
+
+Такой формат помогает:
+
+- видеть связи в Graph view;
+- переходить между документами внутри Obsidian;
+- сохранять структуру базы знаний как граф;
+- отслеживать, откуда растут решения и куда они передаются.
+
+## 12. Связанные документы
+
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
   - Передаёт: масштаб системы знаний.
   - Используется для: определения необходимости связей между документами.
-  - Ограничение: не задаёт синтаксис ссылок.
+  - Ограничение: не задаёт полный синтаксис ссылок.
 
-- [Documentation System Regulation](Documentation_System_Regulation.md)
+- [[docs/01_regulations/Documentation_System_Regulation|Documentation System Regulation]]
   - Передаёт: общие правила системы документации.
   - Используется для: согласования ссылок с общей структурой базы знаний.
   - Ограничение: не заменяет этот документ.
 
-- [Document Writing Rules](Document_Writing_Rules.md)
+- [[docs/01_regulations/Document_Writing_Rules|Document Writing Rules]]
   - Передаёт: стиль изложения.
   - Используется для: оформления связей без личного шума.
-  - Ограничение: не задаёт полный список относительных путей.
+  - Ограничение: не задаёт полный список путей.
 
-- [Documentation Map](../00_maps/Documentation_Map.md)
+- [[docs/00_maps/Documentation_Map|Documentation Map]]
   - Передаёт: структуру документации.
   - Используется для: проверки, что ссылки ведут к документам в правильном слое.
-  - Ограничение: не задаёт синтаксис ссылок.
+  - Ограничение: не задаёт полный синтаксис ссылок.
 
-## 11. История изменений
+## 13. История изменений
 
-- Updated: Markdown-ссылки объявлены обязательным форматом для GitHub-документации; Obsidian-ссылки оставлены только как дополнительный локальный формат.
+- Updated: Obsidian wikilinks объявлены основным форматом внутренних ссылок проекта; Markdown-ссылки оставлены как дополнительный формат для GitHub.
