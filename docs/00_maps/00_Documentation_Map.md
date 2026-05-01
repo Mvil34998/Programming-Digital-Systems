@@ -213,7 +213,7 @@ Programming-Digital-Systems
 
 Документы:
 
-- [[docs/05_encyclopedia/Entities|Entities]]
+- [[docs/05_encyclopedia/01_Entities|Entities]]
 - [[docs/05_encyclopedia/Data|Data]]
 - [[docs/05_encyclopedia/Rules|Rules]]
 - [[docs/05_encyclopedia/States|States]]
@@ -408,3 +408,4 @@ flowchart TD
 
 - Updated: документ приведён к рабочим Obsidian wikilinks вместо текстовых путей и Markdown-only ссылок.
 - Updated: слой диаграмм дополнен базовыми диаграммами системы знаний и диаграммами roadmap-этапов.
+- Updated: энциклопедический слой начал наполняться с документа [[docs/05_encyclopedia/01_Entities|Entities]].
