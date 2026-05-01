@@ -2,11 +2,11 @@
 
 ## 1. Назначение документа
 
-`Documentation_Map_Diagrams.md` хранит крупные диаграммы структуры документации проекта Programming Digital Systems.
+`00_00_00_Documentation_Map_Diagrams.md` хранит крупные диаграммы структуры документации проекта Programming Digital Systems.
 
 Документ показывает, как связаны между собой уровни базы знаний: масштаб проекта, агентные правила, карты, регламенты, шаблоны, roadmap-документы, анкеты, энциклопедия, примеры, диаграммы и будущие книги.
 
-Документ не заменяет [[docs/00_maps/Documentation_Map|Documentation Map]]. Он визуализирует её ключевые связи.
+Документ не заменяет [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]. Он визуализирует её ключевые связи.
 
 ## 2. Связанные документы
 
@@ -22,12 +22,12 @@
   - Используется для: связи агентного слоя с регламентами и картами.
   - Ограничение: не является картой документации.
 
-- [[docs/00_maps/Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
   - Передаёт: полный список слоёв документации.
   - Используется для: построения диаграмм структуры.
   - Ограничение: текстовая карта не заменяет визуальные схемы.
 
-- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/00_maps/00_00_Knowledge_Layer_Map|Knowledge Layer Map]]
   - Передаёт: назначение каждого слоя знаний.
   - Используется для: детализации связей между слоями.
   - Ограничение: не показывает все рабочие переходы.
@@ -78,10 +78,10 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/00_maps/Documentation_Map|Documentation Map]]
-- [[docs/00_maps/Development_Route_Map|Development Route Map]]
-- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
-- [[docs/00_maps/Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_00_Development_Route_Map|Development Route Map]]
+- [[docs/00_maps/00_00_Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
 
 ## 5. DG-DOC-003. Регламентный слой
 
@@ -215,9 +215,9 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/07_diagrams/System_Map|System Map]]
-- [[docs/07_diagrams/Documentation_Map_Diagrams|Documentation Map Diagrams]]
-- [[docs/07_diagrams/Development_Route_Diagrams|Development Route Diagrams]]
+- [[docs/07_diagrams/00_00_System_Map|System Map]]
+- [[docs/07_diagrams/00_00_Documentation_Map_Diagrams|Documentation Map Diagrams]]
+- [[docs/07_diagrams/00_00_Development_Route_Diagrams|Development Route Diagrams]]
 
 ## 10. DG-DOC-008. Книжный слой
 
@@ -259,7 +259,7 @@ flowchart TD
 
 - Диаграммы используются для навигации по документации.
 - Диаграммы не должны заменять текстовые определения и правила.
-- Если структура документации меняется, этот документ должен обновляться вместе с [[docs/00_maps/Documentation_Map|Documentation Map]].
+- Если структура документации меняется, этот документ должен обновляться вместе с [[docs/00_maps/00_00_Documentation_Map|Documentation Map]].
 - Диаграммы должны сохранять совместимость с Obsidian Mermaid.
 - Категории и примеры должны оставаться на разных уровнях графа.
 
@@ -267,9 +267,9 @@ flowchart TD
 
 Этот документ должен использоваться в:
 
-- [[docs/00_maps/Documentation_Map|Documentation Map]]
-- [[docs/00_maps/Knowledge_Layer_Map|Knowledge Layer Map]]
-- [[docs/07_diagrams/System_Map|System Map]]
+- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_00_Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/07_diagrams/00_00_System_Map|System Map]]
 - [[docs/08_books/Book_01_Foundations|Book 01: Foundations]]
 
 ## 13. История изменений

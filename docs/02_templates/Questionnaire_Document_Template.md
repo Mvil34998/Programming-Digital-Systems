@@ -74,8 +74,8 @@
 
 ### Связанные документы
 
-- `Roadmap_System_Design.md#Данные`.
-- `Roadmap_Technical_Requirements.md#Требования к данным`.
+- `01_01_Roadmap_System_Design.md#Данные`.
+- `03_03_Roadmap_Technical_Requirements.md#Требования к данным`.
 
 ### Следующий шаг
 

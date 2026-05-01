@@ -2,21 +2,21 @@
 
 ## 1. Назначение документа
 
-`Roadmap_Toolchain_Selection_Diagrams.md` хранит диаграммы этапа выбора инструментария.
+`05_05_05_Roadmap_Toolchain_Selection_Diagrams.md` хранит диаграммы этапа выбора инструментария.
 
 Документ визуализирует, как технические требования и архитектурные ограничения превращаются в критерии выбора, категории инструментария, кандидатов, решения и ограничения выбранных инструментов.
 
-Документ не заменяет [[docs/03_roadmaps/Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]] и [[docs/04_questionnaires/Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
+Документ не заменяет [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]] и [[docs/04_questionnaires/05_05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
 
 ## 2. Связанные документы
 
-- [[docs/03_roadmaps/Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
-- [[docs/04_questionnaires/Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]]
-- [[docs/03_roadmaps/Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
-- [[docs/03_roadmaps/Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
-- [[docs/04_questionnaires/Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
-- [[docs/00_maps/Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
-- [[docs/07_diagrams/Roadmap_Technical_Requirements_Diagrams|Roadmap Technical Requirements Diagrams]]
+- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/04_questionnaires/05_05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]]
+- [[docs/03_roadmaps/05_05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
+- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/04_questionnaires/03_03_Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
+- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/07_diagrams/03_03_Roadmap_Technical_Requirements_Diagrams|Roadmap Technical Requirements Diagrams]]
 
 ## 3. DG-TOOLS-001. Вход в выбор инструментария
 
