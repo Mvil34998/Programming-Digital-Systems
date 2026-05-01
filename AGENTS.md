@@ -34,7 +34,7 @@ AI-агент должен использовать этот файл перед
 1. `PROJECT_SCOPE.md`
    - Определяет масштаб проекта, центральную формулу цифровой системы и области применения.
 
-2. `docs/00_maps/00_00_Documentation_Map.md`
+2. `docs/00_maps/00_Documentation_Map.md`
    - Определяет карту базы знаний, слои документации и маршрут движения пользователя.
 
 3. `docs/01_regulations/Documentation_System_Regulation.md`
@@ -62,7 +62,7 @@ AI-агент должен использовать этот файл перед
 ```text
 PROJECT_SCOPE.md
 ↓
-docs/00_maps/00_00_Documentation_Map.md
+docs/00_maps/00_Documentation_Map.md
 ↓
 docs/01_regulations/Documentation_System_Regulation.md
 ↓
@@ -188,7 +188,7 @@ AI-агенту запрещено:
 
 Если агент создаёт новый крупный документ, слой или маршрут, он должен проверить необходимость обновления:
 
-- `docs/00_maps/00_00_Documentation_Map.md`;
+- `docs/00_maps/00_Documentation_Map.md`;
 - связанных roadmap-документов;
 - связанных анкет;
 - связанных регламентов;
