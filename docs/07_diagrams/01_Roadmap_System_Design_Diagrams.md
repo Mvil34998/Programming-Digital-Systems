@@ -2,16 +2,16 @@
 
 ## 1. Назначение документа
 
-`01_01_01_Roadmap_System_Design_Diagrams.md` хранит диаграммы этапа проектирования системы.
+`01_01_Roadmap_System_Design_Diagrams.md` хранит диаграммы этапа проектирования системы.
 
 Документ визуализирует, как из идеи системы выделяются граница, сущности, данные, правила, состояния, события, потоки, хранение и ошибки.
 
-Документ не заменяет [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]] и [[docs/04_questionnaires/01_01_Questionnaire_System_Design|Questionnaire: System Design]].
+Документ не заменяет [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]] и [[docs/04_questionnaires/01_Questionnaire_System_Design|Questionnaire: System Design]].
 
 ## 2. Связанные документы
 
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
-- [[docs/04_questionnaires/01_01_Questionnaire_System_Design|Questionnaire: System Design]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/04_questionnaires/01_Questionnaire_System_Design|Questionnaire: System Design]]
 - [[docs/05_encyclopedia/Entities|Entities]]
 - [[docs/05_encyclopedia/Data|Data]]
 - [[docs/05_encyclopedia/Rules|Rules]]
@@ -20,8 +20,8 @@
 - [[docs/05_encyclopedia/Flows|Flows]]
 - [[docs/05_encyclopedia/Storage|Storage]]
 - [[docs/05_encyclopedia/Errors|Errors]]
-- [[docs/07_diagrams/00_00_System_Map|System Map]]
-- [[docs/07_diagrams/00_00_Development_Route_Diagrams|Development Route Diagrams]]
+- [[docs/07_diagrams/00_System_Map|System Map]]
+- [[docs/07_diagrams/00_Development_Route_Diagrams|Development Route Diagrams]]
 
 ## 3. DG-SD-001. Последовательность проектирования системы
 

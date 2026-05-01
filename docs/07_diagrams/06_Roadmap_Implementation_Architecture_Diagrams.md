@@ -2,22 +2,22 @@
 
 ## 1. Назначение документа
 
-`06_06_06_Roadmap_Implementation_Architecture_Diagrams.md` хранит диаграммы этапа проектирования архитектуры реализации.
+`06_06_Roadmap_Implementation_Architecture_Diagrams.md` хранит диаграммы этапа проектирования архитектуры реализации.
 
 Документ визуализирует, как архитектура системы, технические требования и выбранный инструментарий превращаются в структуру проекта, директории, модули реализации, точки входа, адаптеры, конфигурацию, ошибки, логирование, тесты и правила зависимостей.
 
-Документ не заменяет [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]] и [[docs/04_questionnaires/06_06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
+Документ не заменяет [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]] и [[docs/04_questionnaires/06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
 
 ## 2. Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
-- [[docs/04_questionnaires/06_06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
-- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
-- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
-- [[docs/07_diagrams/02_02_Roadmap_System_Architecture_Diagrams|Roadmap System Architecture Diagrams]]
-- [[docs/07_diagrams/03_03_Roadmap_Technical_Requirements_Diagrams|Roadmap Technical Requirements Diagrams]]
-- [[docs/07_diagrams/05_05_Roadmap_Toolchain_Selection_Diagrams|Roadmap Toolchain Selection Diagrams]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/04_questionnaires/06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/07_diagrams/02_Roadmap_System_Architecture_Diagrams|Roadmap System Architecture Diagrams]]
+- [[docs/07_diagrams/03_Roadmap_Technical_Requirements_Diagrams|Roadmap Technical Requirements Diagrams]]
+- [[docs/07_diagrams/05_Roadmap_Toolchain_Selection_Diagrams|Roadmap Toolchain Selection Diagrams]]
 
 ## 3. DG-IMPL-001. Вход в архитектуру реализации
 

@@ -2,27 +2,27 @@
 
 ## 1. Назначение документа
 
-`00_00_Development_Route_Diagrams.md` хранит крупные диаграммы маршрута разработки цифровой системы.
+`00_Development_Route_Diagrams.md` хранит крупные диаграммы маршрута разработки цифровой системы.
 
 Документ показывает путь от идеи до проектирования, требований, выбора инструментария, реализации, тестирования, эксплуатации, сопровождения и развития.
 
-Документ не заменяет [[docs/00_maps/00_00_Development_Route_Map|Development Route Map]]. Он визуализирует маршрут и его ключевые возвраты.
+Документ не заменяет [[docs/00_maps/00_Development_Route_Map|Development Route Map]]. Он визуализирует маршрут и его ключевые возвраты.
 
 ## 2. Связанные документы
 
 ### Входные документы
 
-- [[docs/00_maps/00_00_Development_Route_Map|Development Route Map]]
+- [[docs/00_maps/00_Development_Route_Map|Development Route Map]]
   - Передаёт: полный маршрут разработки.
   - Используется для: построения диаграмм этапов.
   - Ограничение: текстовый маршрут не заменяет визуальные схемы.
 
-- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
   - Передаёт: место маршрута в общей документации.
   - Используется для: связи диаграмм с документационными слоями.
   - Ограничение: не раскрывает все переходы маршрута.
 
-- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
   - Передаёт: отдельный переход от требований к критериям выбора инструментария.
   - Используется для: визуализации связи требований и инструментов.
   - Ограничение: не заменяет roadmap выбора инструментария.
@@ -50,16 +50,16 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
-- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
-- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
-- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
-- [[docs/03_roadmaps/07_07_Roadmap_Testing|Roadmap: Testing]]
-- [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]]
-- [[docs/03_roadmaps/09_09_Roadmap_Maintenance|Roadmap: Maintenance]]
-- [[docs/03_roadmaps/10_10_Roadmap_System_Evolution|Roadmap: System Evolution]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/09_Roadmap_Maintenance|Roadmap: Maintenance]]
+- [[docs/03_roadmaps/10_Roadmap_System_Evolution|Roadmap: System Evolution]]
 
 ## 4. DG-ROUTE-002. Разделение проектирования системы и архитектуры системы
 
@@ -96,8 +96,8 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
 
 ## 5. DG-ROUTE-003. Разделение требований и инструментария
 
@@ -129,10 +129,10 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
-- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
-- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
-- [[docs/03_roadmaps/05_05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/03_roadmaps/05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
 
 ## 6. DG-ROUTE-004. Связь roadmap и анкет в маршруте
 
@@ -177,8 +177,8 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
-- [[docs/04_questionnaires/06_06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/04_questionnaires/06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
 
 ## 8. DG-ROUTE-006. Тестирование, эксплуатация, сопровождение, развитие
 
@@ -203,10 +203,10 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/07_07_Roadmap_Testing|Roadmap: Testing]]
-- [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]]
-- [[docs/03_roadmaps/09_09_Roadmap_Maintenance|Roadmap: Maintenance]]
-- [[docs/03_roadmaps/10_10_Roadmap_System_Evolution|Roadmap: System Evolution]]
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/09_Roadmap_Maintenance|Roadmap: Maintenance]]
+- [[docs/03_roadmaps/10_Roadmap_System_Evolution|Roadmap: System Evolution]]
 
 ## 9. DG-ROUTE-007. Возвраты по маршруту
 
@@ -271,7 +271,7 @@ flowchart TD
 
 - Диаграммы маршрута используются для ориентации в процессе разработки.
 - Диаграммы маршрута не заменяют roadmap-документы.
-- Если маршрут меняется, нужно обновить [[docs/00_maps/00_00_Development_Route_Map|Development Route Map]] и этот документ.
+- Если маршрут меняется, нужно обновить [[docs/00_maps/00_Development_Route_Map|Development Route Map]] и этот документ.
 - Если создаётся новая анкета или roadmap, нужно проверить, нужен ли новый узел на диаграммах маршрута.
 - Запрещённые переходы должны оставаться явно видимыми.
 
@@ -279,9 +279,9 @@ flowchart TD
 
 Этот документ должен использоваться в:
 
-- [[docs/00_maps/00_00_Development_Route_Map|Development Route Map]]
-- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
-- [[docs/07_diagrams/00_00_System_Map|System Map]]
+- [[docs/00_maps/00_Development_Route_Map|Development Route Map]]
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
+- [[docs/07_diagrams/00_System_Map|System Map]]
 - [[docs/06_examples/Examples_Index|Examples Index]]
 - [[docs/08_books/Book_01_Foundations|Book 01: Foundations]]
 

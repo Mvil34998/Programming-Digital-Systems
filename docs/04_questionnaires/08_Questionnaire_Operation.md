@@ -2,7 +2,7 @@
 
 ## 1. Назначение анкеты
 
-`08_08_Questionnaire_Operation.md` превращает [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]] в последовательность вопросов для подготовки системы к реальному использованию.
+`08_Questionnaire_Operation.md` превращает [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]] в последовательность вопросов для подготовки системы к реальному использованию.
 
 Анкета помогает определить:
 
@@ -21,7 +21,7 @@
 
 ## 2. Связанный roadmap-документ
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
   - Передаёт: порядок подготовки эксплуатации.
   - Используется для: построения вопросов анкеты.
   - Ограничение: анкета фиксирует ответы пользователя, а не заменяет roadmap-документ.
@@ -51,8 +51,8 @@
 
 Основные входные документы:
 
-- [[docs/04_questionnaires/07_07_Questionnaire_Testing|Questionnaire: Testing]].
-- [[docs/04_questionnaires/06_06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
+- [[docs/04_questionnaires/07_Questionnaire_Testing|Questionnaire: Testing]].
+- [[docs/04_questionnaires/06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]].
 
 ## 5. Вопросы анкеты
 
@@ -83,7 +83,7 @@
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#6.1. Эксплуатационный сценарий|Roadmap: Operation — эксплуатационный сценарий]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#6.1. Эксплуатационный сценарий|Roadmap: Operation — эксплуатационный сценарий]].
 
 ## Q-OP-002. Как система запускается?
 
@@ -114,7 +114,7 @@
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.1. Запуск и остановка|Roadmap: Operation — запуск и остановка]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.1. Запуск и остановка|Roadmap: Operation — запуск и остановка]].
 
 ## Q-OP-003. Как система останавливается?
 
@@ -143,7 +143,7 @@
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.1. Запуск и остановка|Roadmap: Operation — запуск и остановка]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.1. Запуск и остановка|Roadmap: Operation — запуск и остановка]].
 
 ## Q-OP-004. Какие рабочие сценарии выполняются?
 
@@ -180,7 +180,7 @@ OP-SCENARIO-002:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.2. Рабочие сценарии|Roadmap: Operation — рабочие сценарии]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.2. Рабочие сценарии|Roadmap: Operation — рабочие сценарии]].
 
 ## Q-OP-005. Какие входные данные используются в эксплуатации?
 
@@ -210,7 +210,7 @@ OP-SCENARIO-002:
 ### Связанные документы
 
 - [[docs/05_encyclopedia/Data|Data]].
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.3. Входные данные эксплуатации|Roadmap: Operation — входные данные эксплуатации]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.3. Входные данные эксплуатации|Roadmap: Operation — входные данные эксплуатации]].
 
 ## Q-OP-006. Какие результаты должна выдавать система?
 
@@ -269,7 +269,7 @@ OP-SCENARIO-002:
 ### Связанные документы
 
 - [[docs/05_encyclopedia/Errors|Errors]].
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.5. Ошибки в эксплуатации|Roadmap: Operation — ошибки в эксплуатации]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.5. Ошибки в эксплуатации|Roadmap: Operation — ошибки в эксплуатации]].
 
 ## Q-OP-008. Какие логи и диагностика нужны в эксплуатации?
 
@@ -300,7 +300,7 @@ OP-SCENARIO-002:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation#7.6. Логи и диагностика в эксплуатации|Roadmap: Operation — логи и диагностика]].
+- [[docs/03_roadmaps/08_Roadmap_Operation#7.6. Логи и диагностика в эксплуатации|Roadmap: Operation — логи и диагностика]].
 
 ## Q-OP-009. Нужно ли резервное копирование и восстановление?
 
@@ -393,8 +393,8 @@ OP-SCENARIO-002:
 
 ### Связанные документы
 
-- [[docs/04_questionnaires/09_09_Questionnaire_Maintenance|Questionnaire: Maintenance]].
-- [[docs/04_questionnaires/10_10_Questionnaire_System_Evolution|Questionnaire: System Evolution]].
+- [[docs/04_questionnaires/09_Questionnaire_Maintenance|Questionnaire: Maintenance]].
+- [[docs/04_questionnaires/10_Questionnaire_System_Evolution|Questionnaire: System Evolution]].
 
 ## 6. Контроль полноты ответов
 
@@ -426,7 +426,7 @@ OP-SCENARIO-002:
 - список действий при ошибках;
 - список логов и диагностических данных;
 - список ограничений эксплуатации;
-- входные данные для [[docs/04_questionnaires/09_09_Questionnaire_Maintenance|Questionnaire: Maintenance]].
+- входные данные для [[docs/04_questionnaires/09_Questionnaire_Maintenance|Questionnaire: Maintenance]].
 
 ## 8. Открытые вопросы
 

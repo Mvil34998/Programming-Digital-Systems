@@ -2,7 +2,7 @@
 
 ## 1. Назначение документа
 
-`00_00_System_Map.md` хранит крупные диаграммы универсальной структуры цифровой системы.
+`00_System_Map.md` хранит крупные диаграммы универсальной структуры цифровой системы.
 
 Документ показывает, как базовые понятия цифрового мира связаны между собой: сущности, данные, правила, состояния, события, потоки, хранение, ошибки, интерфейсы, архитектура, требования, инструментарий, реализация, тестирование, эксплуатация, сопровождение и развитие.
 
@@ -17,12 +17,12 @@
   - Используется для: построения общей карты системы.
   - Ограничение: не раскрывает все понятия подробно.
 
-- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
   - Передаёт: место слоя диаграмм в документации.
   - Используется для: связи этой карты с остальными слоями.
   - Ограничение: не является картой самой цифровой системы.
 
-- [[docs/00_maps/00_00_Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/00_maps/00_Knowledge_Layer_Map|Knowledge Layer Map]]
   - Передаёт: место энциклопедии, roadmap, анкет, примеров и книг.
   - Используется для: связи понятий с документами базы знаний.
   - Ограничение: не описывает полный жизненный цикл системы.
@@ -89,16 +89,16 @@ flowchart TD
 
 Связанные документы:
 
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
-- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
-- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
-- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
-- [[docs/03_roadmaps/07_07_Roadmap_Testing|Roadmap: Testing]]
-- [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]]
-- [[docs/03_roadmaps/09_09_Roadmap_Maintenance|Roadmap: Maintenance]]
-- [[docs/03_roadmaps/10_10_Roadmap_System_Evolution|Roadmap: System Evolution]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/09_Roadmap_Maintenance|Roadmap: Maintenance]]
+- [[docs/03_roadmaps/10_Roadmap_System_Evolution|Roadmap: System Evolution]]
 
 ## 5. DG-SYS-003. Связь базовых понятий системы
 
@@ -186,9 +186,9 @@ flowchart TD
 
 Этот документ должен использоваться в:
 
-- [[docs/00_maps/00_00_Documentation_Map|Documentation Map]]
-- [[docs/00_maps/00_00_Knowledge_Layer_Map|Knowledge Layer Map]]
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
 - [[docs/05_encyclopedia/Architecture|Architecture]]
 - [[docs/06_examples/Examples_Index|Examples Index]]
 - [[docs/08_books/Book_01_Foundations|Book 01: Foundations]]

@@ -2,7 +2,7 @@
 
 ## 1. Назначение анкеты
 
-`06_06_Questionnaire_Implementation_Architecture.md` превращает [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]] в последовательность вопросов для проектирования конкретной структуры реализации цифровой системы.
+`06_Questionnaire_Implementation_Architecture.md` превращает [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]] в последовательность вопросов для проектирования конкретной структуры реализации цифровой системы.
 
 Анкета должна помочь пользователю определить:
 
@@ -22,7 +22,7 @@
 
 ## 2. Связанный roadmap-документ
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
   - Передаёт: порядок проектирования архитектуры реализации.
   - Используется для: построения вопросов анкеты.
   - Ограничение: анкета фиксирует ответы пользователя, а не заменяет roadmap-документ.
@@ -55,9 +55,9 @@
 
 Основные входные документы:
 
-- [[docs/04_questionnaires/02_02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
-- [[docs/04_questionnaires/03_03_Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]].
-- [[docs/04_questionnaires/05_05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
+- [[docs/04_questionnaires/02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
+- [[docs/04_questionnaires/03_Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]].
+- [[docs/04_questionnaires/05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]].
 
 ## 5. Вопросы анкеты
 
@@ -92,7 +92,7 @@ project_root/
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.1. Структура директорий|Roadmap: Implementation Architecture — структура директорий]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.1. Структура директорий|Roadmap: Implementation Architecture — структура директорий]].
 
 ### Следующий шаг
 
@@ -135,7 +135,7 @@ project_root/
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#10.2. Шаг 2. Определить структуру проекта|Шаг 2. Определить структуру проекта]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#10.2. Шаг 2. Определить структуру проекта|Шаг 2. Определить структуру проекта]].
 
 ### Следующий шаг
 
@@ -191,7 +191,7 @@ MODULE-IMPL-002:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.2. Модули кода|Roadmap: Implementation Architecture — модули кода]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.2. Модули кода|Roadmap: Implementation Architecture — модули кода]].
 
 ### Следующий шаг
 
@@ -234,8 +234,8 @@ MODULE-IMPL-002:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.3. Реализация слоёв|Roadmap: Implementation Architecture — реализация слоёв]].
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design#7. Слои|Roadmap: System Architecture Design — слои]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.3. Реализация слоёв|Roadmap: Implementation Architecture — реализация слоёв]].
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design#7. Слои|Roadmap: System Architecture Design — слои]].
 
 ### Следующий шаг
 
@@ -284,7 +284,7 @@ MODULE-IMPL-002:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#6.3. Точка входа|Roadmap: Implementation Architecture — точка входа]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#6.3. Точка входа|Roadmap: Implementation Architecture — точка входа]].
 
 ### Следующий шаг
 
@@ -333,7 +333,7 @@ DTO / структуры обмена:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.4. Реализация моделей|Roadmap: Implementation Architecture — реализация моделей]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.4. Реализация моделей|Roadmap: Implementation Architecture — реализация моделей]].
 
 ### Следующий шаг
 
@@ -383,7 +383,7 @@ DTO / структуры обмена:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.5. Реализация интерфейсов и адаптеров|Roadmap: Implementation Architecture — интерфейсы и адаптеры]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.5. Реализация интерфейсов и адаптеров|Roadmap: Implementation Architecture — интерфейсы и адаптеры]].
 
 ### Следующий шаг
 
@@ -433,7 +433,7 @@ DTO / структуры обмена:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.6. Конфигурация реализации|Roadmap: Implementation Architecture — конфигурация реализации]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.6. Конфигурация реализации|Roadmap: Implementation Architecture — конфигурация реализации]].
 
 ### Следующий шаг
 
@@ -485,7 +485,7 @@ DTO / структуры обмена:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.7. Ошибки и логирование в реализации|Roadmap: Implementation Architecture — ошибки и логирование]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.7. Ошибки и логирование в реализации|Roadmap: Implementation Architecture — ошибки и логирование]].
 - [[docs/05_encyclopedia/Errors|Errors]].
 
 ### Следующий шаг
@@ -538,8 +538,8 @@ Mock / fake-реализации:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.8. Тестовая структура|Roadmap: Implementation Architecture — тестовая структура]].
-- [[docs/03_roadmaps/07_07_Roadmap_Testing|Roadmap: Testing]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.8. Тестовая структура|Roadmap: Implementation Architecture — тестовая структура]].
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]].
 
 ### Следующий шаг
 
@@ -589,7 +589,7 @@ Mock / fake-реализации:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.9. Сборка, запуск и поставка|Roadmap: Implementation Architecture — сборка, запуск и поставка]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.9. Сборка, запуск и поставка|Roadmap: Implementation Architecture — сборка, запуск и поставка]].
 
 ### Следующий шаг
 
@@ -636,7 +636,7 @@ Mock / fake-реализации:
 
 ### Связанные документы
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture#7.10. Правила зависимостей реализации|Roadmap: Implementation Architecture — правила зависимостей реализации]].
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture#7.10. Правила зависимостей реализации|Roadmap: Implementation Architecture — правила зависимостей реализации]].
 
 ### Следующий шаг
 
@@ -678,8 +678,8 @@ Mock / fake-реализации:
 - команды запуска, проверки и сборки;
 - правила зависимостей;
 - список открытых вопросов;
-- входные данные для [[docs/04_questionnaires/07_07_Questionnaire_Testing|Questionnaire: Testing]];
-- входные данные для [[docs/04_questionnaires/08_08_Questionnaire_Operation|Questionnaire: Operation]].
+- входные данные для [[docs/04_questionnaires/07_Questionnaire_Testing|Questionnaire: Testing]];
+- входные данные для [[docs/04_questionnaires/08_Questionnaire_Operation|Questionnaire: Operation]].
 
 ## 8. Открытые вопросы
 

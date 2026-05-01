@@ -36,7 +36,7 @@
 - без PLC;
 - без CNC/CAM-специализации.
 
-Это важно для связи с [[docs/03_roadmaps/05_05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]: специализированные категории инструментария не выбираются, если они не требуются типом системы.
+Это важно для связи с [[docs/03_roadmaps/05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]: специализированные категории инструментария не выбираются, если они не требуются типом системы.
 
 ## 3. Идея системы
 
@@ -78,14 +78,14 @@
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
   - Передаёт: правила проектирования сущностей, данных, правил, состояний, событий, потоков, хранения и ошибок.
   - Используется для: проектирования этой Python-утилиты как системы.
   - Ограничение: не выбирает инструментарий.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/01_01_Questionnaire_System_Design|Questionnaire: System Design]]
+- [[docs/04_questionnaires/01_Questionnaire_System_Design|Questionnaire: System Design]]
   - Передаёт: вопросы для практического заполнения проектирования системы.
   - Используется для: превращения этого примера в заполняемый учебный кейс.
   - Ограничение: не заменяет roadmap.
@@ -234,14 +234,14 @@ flowchart TD
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
   - Передаёт: правила проектирования слоёв, модулей, моделей, интерфейсов и зависимостей.
   - Используется для: архитектурного разделения утилиты.
   - Ограничение: не подменяет архитектуру реализации.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/02_02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]]
+- [[docs/04_questionnaires/02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]]
 
 Связанный энциклопедический документ:
 
@@ -277,14 +277,14 @@ flowchart TD
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/03_03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
   - Передаёт: правила формирования проверяемых требований.
   - Используется для: требований этой утилиты.
   - Ограничение: не выбирает инструменты.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/03_03_Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
+- [[docs/04_questionnaires/03_Questionnaire_Technical_Requirements|Questionnaire: Technical Requirements]]
 
 ## REQ-TR-001. Проверка входной папки
 
@@ -320,7 +320,7 @@ flowchart TD
 
 Связанный документ:
 
-- [[docs/00_maps/04_04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
   - Передаёт: способ превращения требований в критерии выбора инструментария.
   - Используется для: раздела выбора Python, стандартной библиотеки и pytest.
   - Ограничение: не выбирает инструмент напрямую.
@@ -337,18 +337,18 @@ flowchart TD
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/05_05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
   - Передаёт: правила выбора инструментария.
   - Используется для: выбора Python и стандартных библиотек.
   - Ограничение: не меняет требования.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/05_05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]]
+- [[docs/04_questionnaires/05_Questionnaire_Toolchain_Selection|Questionnaire: Toolchain Selection]]
 
 Связанный регламент категорий:
 
-- [[docs/03_roadmaps/05_05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
+- [[docs/03_roadmaps/05_Toolchain_Selection_Category_Rules|Toolchain Selection Category Rules]]
 
 ### 9.1. Тип системы
 
@@ -387,14 +387,14 @@ flowchart TD
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/06_06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
   - Передаёт: правила построения структуры проекта, модулей, адаптеров, конфигурации и тестов.
   - Используется для: структуры этой утилиты.
   - Ограничение: не пишет код.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/06_06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
+- [[docs/04_questionnaires/06_Questionnaire_Implementation_Architecture|Questionnaire: Implementation Architecture]]
 
 ### 10.1. Структура проекта
 
@@ -444,14 +444,14 @@ file_stats_utility/
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/07_07_Roadmap_Testing|Roadmap: Testing]]
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]]
   - Передаёт: правила проектирования тестов и критериев приёмки.
   - Используется для: проверки этой утилиты.
   - Ограничение: не подменяет эксплуатацию.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/07_07_Questionnaire_Testing|Questionnaire: Testing]]
+- [[docs/04_questionnaires/07_Questionnaire_Testing|Questionnaire: Testing]]
 
 ### 12.1. Unit-тесты
 
@@ -477,14 +477,14 @@ file_stats_utility/
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/08_08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
   - Передаёт: правила запуска, рабочих сценариев, ошибок пользователя и логов.
   - Используется для: эксплуатации этой утилиты.
   - Ограничение: не подменяет сопровождение.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/08_08_Questionnaire_Operation|Questionnaire: Operation]]
+- [[docs/04_questionnaires/08_Questionnaire_Operation|Questionnaire: Operation]]
 
 ### 13.1. Запуск
 
@@ -503,14 +503,14 @@ python src/main.py --input examples/input --output output
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/09_09_Roadmap_Maintenance|Roadmap: Maintenance]]
+- [[docs/03_roadmaps/09_Roadmap_Maintenance|Roadmap: Maintenance]]
   - Передаёт: правила фиксации дефектов, исправлений и регрессии.
   - Используется для: сопровождения этой утилиты.
   - Ограничение: не подменяет развитие системы.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/09_09_Questionnaire_Maintenance|Questionnaire: Maintenance]]
+- [[docs/04_questionnaires/09_Questionnaire_Maintenance|Questionnaire: Maintenance]]
 
 Возможные дефекты:
 
@@ -523,14 +523,14 @@ python src/main.py --input examples/input --output output
 
 Связанный roadmap:
 
-- [[docs/03_roadmaps/10_10_Roadmap_System_Evolution|Roadmap: System Evolution]]
+- [[docs/03_roadmaps/10_Roadmap_System_Evolution|Roadmap: System Evolution]]
   - Передаёт: правила анализа новых возможностей и влияния изменений.
   - Используется для: развития этой утилиты.
   - Ограничение: не маскирует дефекты как новые функции.
 
 Связанная анкета:
 
-- [[docs/04_questionnaires/10_10_Questionnaire_System_Evolution|Questionnaire: System Evolution]]
+- [[docs/04_questionnaires/10_Questionnaire_System_Evolution|Questionnaire: System Evolution]]
 
 Возможные направления развития:
 

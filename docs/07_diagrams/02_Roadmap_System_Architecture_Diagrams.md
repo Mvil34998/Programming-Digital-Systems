@@ -2,21 +2,21 @@
 
 ## 1. Назначение документа
 
-`02_02_Roadmap_System_Architecture_Diagrams.md` хранит диаграммы этапа проектирования архитектуры системы.
+`02_Roadmap_System_Architecture_Diagrams.md` хранит диаграммы этапа проектирования архитектуры системы.
 
 Документ визуализирует, как результаты проектирования системы превращаются в слои, модули, модели, интерфейсы, зависимости, конфигурации и точки расширения.
 
-Документ не заменяет [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]] и [[docs/04_questionnaires/02_02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
+Документ не заменяет [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]] и [[docs/04_questionnaires/02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]].
 
 ## 2. Связанные документы
 
-- [[docs/03_roadmaps/02_02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
-- [[docs/04_questionnaires/02_02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]]
-- [[docs/03_roadmaps/01_01_Roadmap_System_Design|Roadmap: System Design]]
-- [[docs/04_questionnaires/01_01_Questionnaire_System_Design|Questionnaire: System Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/04_questionnaires/02_Questionnaire_System_Architecture_Design|Questionnaire: System Architecture Design]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/04_questionnaires/01_Questionnaire_System_Design|Questionnaire: System Design]]
 - [[docs/05_encyclopedia/Architecture|Architecture]]
 - [[docs/05_encyclopedia/Interfaces|Interfaces]]
-- [[docs/07_diagrams/01_01_Roadmap_System_Design_Diagrams|Roadmap System Design Diagrams]]
+- [[docs/07_diagrams/01_Roadmap_System_Design_Diagrams|Roadmap System Design Diagrams]]
 
 ## 3. DG-ARCH-001. Вход в архитектуру системы
 
