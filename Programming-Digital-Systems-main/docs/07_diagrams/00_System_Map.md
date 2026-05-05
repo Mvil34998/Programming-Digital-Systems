@@ -1,0 +1,250 @@
+# System Map / Карта цифровой системы
+
+## 1. Назначение документа
+
+`00_System_Map.md` хранит крупные диаграммы универсальной структуры цифровой системы.
+
+Документ показывает, как базовые понятия цифрового мира связаны между собой: сущности, данные, правила, состояния, события, потоки, хранение, ошибки, интерфейсы, архитектура, требования, инструментарий, реализация, тестирование, эксплуатация, сопровождение и развитие.
+
+Документ не заменяет энциклопедию, roadmap-документы и анкеты. Документ даёт визуальную карту, к которой можно возвращаться при проектировании.
+
+> [!info] Главное
+> Документ хранит визуальные схемы, которые помогают читать структуру, связи и маршрут.
+
+## 2. Связанные документы
+
+### Входные документы
+
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
+  - Передаёт: масштаб проекта и центральную идею универсальной цифровой системы.
+  - Используется для: построения общей карты системы.
+  - Ограничение: не раскрывает все понятия подробно.
+
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
+  - Передаёт: место слоя диаграмм в документации.
+  - Используется для: связи этой карты с остальными слоями.
+  - Ограничение: не является картой самой цифровой системы.
+
+- [[docs/00_maps/00_Knowledge_Layer_Map|Knowledge Layer Map]]
+  - Передаёт: место энциклопедии, roadmap, анкет, примеров и диаграмм.
+  - Используется для: связи понятий с документами базы знаний.
+  - Ограничение: не описывает полный жизненный цикл системы.
+
+### Основные тематические документы
+
+- [[docs/05_encyclopedia/Entities|Entities]]
+- [[docs/05_encyclopedia/Data|Data]]
+- [[docs/05_encyclopedia/Rules|Rules]]
+- [[docs/05_encyclopedia/States|States]]
+- [[docs/05_encyclopedia/Events|Events]]
+- [[docs/05_encyclopedia/Flows|Flows]]
+- [[docs/05_encyclopedia/Storage|Storage]]
+- [[docs/05_encyclopedia/Errors|Errors]]
+- [[docs/05_encyclopedia/Interfaces|Interfaces]]
+- [[docs/05_encyclopedia/Architecture|Architecture]]
+
+## 3. DG-SYS-001. Универсальная структура цифровой системы
+
+Назначение диаграммы: показать общий состав цифровой системы как цепочку смысловых уровней.
+
+```mermaid
+flowchart TD
+    A[Цифровая система] --> B[Сущности]
+    B --> C[Данные]
+    C --> D[Правила]
+    D --> E[Состояния]
+    E --> F[События]
+    F --> G[Потоки]
+    G --> H[Хранение]
+    G --> I[Ошибки]
+    H --> J[Интерфейсы]
+    I --> J
+    J --> K[Архитектура]
+    K --> L[Технические требования]
+    L --> M[Инструментарий]
+    M --> N[Реализация]
+    N --> O[Тестирование]
+    O --> P[Эксплуатация]
+    P --> Q[Сопровождение]
+    Q --> R[Развитие]
+    R --> B
+
+    classDef root fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef type fill:#e0f2fe,stroke:#0284c7,stroke-width:1px
+    classDef step fill:#f8fafc,stroke:#64748b,stroke-width:1px
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef warning fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+
+    class A root
+    class B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R type
+```
+
+## 4. DG-SYS-002. Переход от понятий к разработке
+
+Назначение диаграммы: показать, как энциклопедические понятия переходят в roadmap, анкеты и реализацию.
+
+```mermaid
+flowchart TD
+    A[Энциклопедические понятия] --> B[Проектирование системы]
+    B --> C[Проектирование архитектуры системы]
+    C --> D[Технические требования]
+    D --> E[Критерии выбора инструментов]
+    E --> F[Выбор инструментария]
+    F --> G[Архитектура реализации]
+    G --> H[Код]
+    H --> I[Тестирование]
+    I --> J[Эксплуатация]
+    J --> K[Сопровождение]
+    K --> L[Развитие системы]
+    L --> B
+
+    classDef root fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef type fill:#e0f2fe,stroke:#0284c7,stroke-width:1px
+    classDef step fill:#f8fafc,stroke:#64748b,stroke-width:1px
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef warning fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+
+    class A root
+    class B,C,D,E,F,G,H,I,J,K,L type
+```
+
+Связанные документы:
+
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/03_roadmaps/02_Roadmap_System_Architecture_Design|Roadmap: System Architecture Design]]
+- [[docs/03_roadmaps/03_Roadmap_Technical_Requirements|Roadmap: Technical Requirements]]
+- [[docs/00_maps/04_Requirements_To_Toolchain_Map|Requirements To Toolchain Map]]
+- [[docs/03_roadmaps/05_Roadmap_Toolchain_Selection|Roadmap: Toolchain Selection]]
+- [[docs/03_roadmaps/06_Roadmap_Implementation_Architecture|Roadmap: Implementation Architecture]]
+- [[docs/03_roadmaps/07_Roadmap_Testing|Roadmap: Testing]]
+- [[docs/03_roadmaps/08_Roadmap_Operation|Roadmap: Operation]]
+- [[docs/03_roadmaps/09_Roadmap_Maintenance|Roadmap: Maintenance]]
+- [[docs/03_roadmaps/10_Roadmap_System_Evolution|Roadmap: System Evolution]]
+
+## 5. DG-SYS-003. Связь базовых понятий системы
+
+Назначение диаграммы: показать не линейный маршрут, а смысловые зависимости между базовыми понятиями.
+
+```mermaid
+flowchart TD
+    A[Сущности] --> B[Данные]
+    A --> C[Состояния]
+    B --> D[Правила]
+    D --> C
+    C --> E[События]
+    E --> F[Потоки]
+    F --> B
+    F --> G[Хранение]
+    D --> H[Ошибки]
+    C --> H
+    F --> H
+    G --> H
+    B --> I[Интерфейсы]
+    H --> I
+    I --> J[Архитектура]
+
+    classDef root fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef type fill:#e0f2fe,stroke:#0284c7,stroke-width:1px
+    classDef step fill:#f8fafc,stroke:#64748b,stroke-width:1px
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef warning fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+
+    class A root
+    class B,C,D,E,F,G,H,I,J type
+```
+
+## 6. DG-SYS-004. Цифровая система в разных областях
+
+Назначение диаграммы: показать, что универсальная структура применяется к разным видам цифровых систем.
+
+```mermaid
+flowchart TD
+    A[Универсальная цифровая система] --> B[Скрипты автоматизации]
+    A --> C[GUI приложения]
+    A --> D[Web системы]
+    A --> E[Embedded системы]
+    A --> F[PLC системы]
+    A --> G[CNC CAM системы]
+    A --> H[Базы данных]
+    A --> I[Интеграционные системы]
+
+    B --> B1[Пример: обработка файлов]
+    C --> C1[Пример: редактор шаблонов]
+    D --> D1[Пример: API сервис]
+    E --> E1[Пример: контроллер датчиков]
+    F --> F1[Пример: автоматический режим]
+    G --> G1[Пример: анализ NC программ]
+    H --> H1[Пример: складской учёт]
+    I --> I1[Пример: обмен Excel и БД]
+
+    classDef root fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef type fill:#e0f2fe,stroke:#0284c7,stroke-width:1px
+    classDef step fill:#f8fafc,stroke:#64748b,stroke-width:1px
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef warning fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+
+    class A root
+    class B,C,D,E,F,G,H,I,B1,C1,D1,E1,F1,G1,H1,I1 type
+```
+
+Правило чтения диаграммы: верхний уровень содержит категории систем, нижний уровень содержит примеры внутри соответствующих категорий.
+
+Связанный документ: [[docs/06_examples/Examples_Index|Examples Index]].
+
+## 7. DG-SYS-005. Контрольная карта проектного мышления
+
+Назначение диаграммы: показать, какие вопросы должен задавать проектировщик до перехода к коду.
+
+```mermaid
+flowchart TD
+    A[Идея] --> B[Что существует в системе]
+    B --> C[Какие данные движутся]
+    C --> D[Какие правила управляют поведением]
+    D --> E[Какие состояния возможны]
+    E --> F[Какие события запускают действия]
+    F --> G[Какие потоки связывают части системы]
+    G --> H[Что нужно хранить]
+    H --> I[Какие ошибки возможны]
+    I --> J[Какие интерфейсы нужны]
+    J --> K[Как система организована архитектурно]
+    K --> L[Каким требованиям должна соответствовать]
+    L --> M[Какие инструменты подходят]
+    M --> N[Как это реализовать]
+    N --> O[Как проверить]
+
+    classDef root fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef type fill:#e0f2fe,stroke:#0284c7,stroke-width:1px
+    classDef step fill:#f8fafc,stroke:#64748b,stroke-width:1px
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef warning fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+
+    class A root
+    class B,C,D,E,F,G,H,I,J,K,L,M,N,O type
+```
+
+## 8. Правила использования диаграмм из документа
+
+- Диаграммы используются как навигационные карты, а не как замена текстового проектирования.
+- Если диаграмма применяется в roadmap-документе, рядом должна быть ссылка на этот файл.
+- Если диаграмма применяется в нескольких документах, она должна сохранять тот же идентификатор `DG-SYS-*`.
+- Если диаграмма устарела, нужно обновить этот документ и документы, которые на неё ссылаются.
+- Mermaid-синтаксис должен оставаться совместимым с Obsidian.
+
+## 9. Выходные связи
+
+Этот документ должен использоваться в:
+
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
+- [[docs/00_maps/00_Knowledge_Layer_Map|Knowledge Layer Map]]
+- [[docs/03_roadmaps/01_Roadmap_System_Design|Roadmap: System Design]]
+- [[docs/05_encyclopedia/Architecture|Architecture]]
+- [[docs/06_examples/Examples_Index|Examples Index]]
+
+## 10. Следующий шаг
+
+После просмотра диаграмм необходимо вернуться к связанному roadmap-документу или карте, где эти схемы применяются.
+
+## 11. История изменений
+
+- Initial version: создана универсальная карта цифровой системы и базовые Mermaid-диаграммы для слоя `docs/07_diagrams`.
+- Updated: документ приведён к единому визуальному формату проекта.
