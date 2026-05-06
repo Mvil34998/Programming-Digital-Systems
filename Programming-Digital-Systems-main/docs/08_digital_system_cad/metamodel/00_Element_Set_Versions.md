@@ -112,14 +112,50 @@ docs/08_digital_system_cad/metamodel/01_Model_Elements.md
 
 > Если в другом документе список элементов отличается от `01_Model_Elements.md`, приоритет имеет `01_Model_Elements.md`, если явно не указано, что документ описывает старую или частную версию.
 
-### 4.3. Element Set v0.3 — Future Profile / Domain Extension Set
+### 4.3. Element Set v0.2-safety — Safety Profile over Working Set
+
+Статус: active profile / safety viewpoint.
+
+Источник:
+
+```text
+docs/08_digital_system_cad/metamodel/08_Safety_As_Model_Layer.md
+```
+
+Назначение:
+
+- включить safety в модель как часть системы, а не как внешний запрет;
+- описывать safety через специализации существующих element types;
+- дать Codex правило: safety tests имеют приоритет, но SafetyGap не останавливает всю разработку;
+- блокировать только unsafe execution paths, разрешая safe work продолжаться.
+
+Safety profile не вводит отдельную финальную safety-метамодель. Он накладывается на working element set:
+
+```text
+SafetyRequirement -> Requirement
+SafetyRule -> Rule
+CriticalEvent -> Event
+FailsafeState -> State
+SafetyError -> Error
+SafetyTestCase -> TestCase
+SafetyValidationRule -> ValidationRule
+SafetyGap -> RequirementGap / OpenQuestion
+SafetyGate -> ValidationRule / Governance element
+ForbiddenBehavior -> Rule / Constraint
+```
+
+Правило использования:
+
+> Safety profile является активным профилем для safety-relevant systems. Он не должен раздувать universal core, но должен быть обязательным viewpoint, если система может создавать опасные физические, финансовые, медицинские, инфраструктурные или эксплуатационные последствия.
+
+### 4.4. Element Set v0.3 — Future Profile / Domain Extension Set
 
 Статус: future / not yet approved.
 
 Назначение:
 
 - выделить доменные расширения, которые не должны входить в универсальное ядро;
-- описать профили для GUI, web, embedded, PLC, CNC/CAM, API, storage, integration и Codex workflow;
+- описать профили для GUI, web, embedded, PLC, CNC/CAM, API, storage, integration, safety и Codex workflow;
 - отделить универсальные element types от profile-specific element types.
 
 Примеры возможных profile-specific кандидатов:
@@ -138,11 +174,16 @@ Device
 PLCBlock
 NCProgram
 Toolpath
+SafetyRequirement
+SafetyRule
+SafetyGate
+SafetyGap
+ForbiddenBehavior
 ```
 
 Правило использования:
 
-> v0.3 нельзя считать частью универсального ядра, пока элементы не проверены на нескольких типах цифровых систем.
+> v0.3 нельзя считать частью универсального ядра, пока элементы не проверены на нескольких типах цифровых систем. Safety profile может использовать специализации раньше, но должен ссылаться на базовые element types.
 
 ## 5. Приоритет при конфликте документов
 
@@ -167,10 +208,13 @@ Toolpath
 6. 02_Model_Relations.md
    - текущий рабочий список relation types.
 
-7. Controlled Vocabulary
+7. 08_Safety_As_Model_Layer.md
+   - safety profile, safety viewpoint, SafetyGap, SafetyGate и P0 safety tests.
+
+8. Controlled Vocabulary
    - термины, definitions, synonyms, forbidden synonyms и контексты.
 
-8. Roadmaps / Questionnaires / Encyclopedia / Examples
+9. Roadmaps / Questionnaires / Encyclopedia / Examples
    - источники применения, обучения, наполнения и проверки.
 ```
 
@@ -186,6 +230,9 @@ Codex должен соблюдать следующие правила:
 6. Если relation type ссылается на отсутствующий element type, создать OpenQuestion или обновить `01_Model_Elements.md`.
 7. Не смешивать универсальное ядро и доменные расширения.
 8. При конфликте между старой энциклопедической терминологией и рабочей метамоделью отдавать приоритет `01_Model_Elements.md`, но фиксировать конфликт как OpenQuestion.
+9. Если система safety-relevant, применять `08_Safety_As_Model_Layer.md` как active profile.
+10. SafetyGap не должен останавливать весь процесс. Он должен блокировать только unsafe execution paths и разрешать safe work.
+11. P0 safety tests имеют приоритет над feature tests для safety-relevant behavior.
 
 ## 7. Связанные документы
 
@@ -213,6 +260,12 @@ Codex должен соблюдать следующие правила:
   - Используется для: согласования relation types с element types.
   - Ограничение: relation types не должны создавать скрытые element types без фиксации в `01_Model_Elements.md`.
 
+- [[docs/08_digital_system_cad/metamodel/08_Safety_As_Model_Layer|Safety as Model Layer]]
+  - Получает: правило profile-based расширения element set без раздувания universal core.
+  - Используется для: safety-relevant systems, P0 safety tests, SafetyGap и SafetyGate.
+  - Ограничение: safety profile не заменяет domain-specific safety engineering standards, но задаёт рабочую форму модели.
+
 ## 8. История изменений
 
 - Initial version: создан документ версионирования наборов element types и правило выбора текущего источника правды.
+- Updated: добавлен active safety profile `v0.2-safety`, связанный с `08_Safety_As_Model_Layer.md`.
