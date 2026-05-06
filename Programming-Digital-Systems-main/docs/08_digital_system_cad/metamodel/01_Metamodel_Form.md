@@ -9,7 +9,36 @@
 > [!info] Главное
 > Сейчас цель — не доказать окончательный список элементов цифрового мира, а создать рабочую форму, с помощью которой можно собирать данные и постепенно уточнять метамодель.
 
-## 2. Что такое рабочая форма метамодели
+## 2. Правило источника правды для element types
+
+Этот документ описывает **форму** метамодели, но не должен хранить независимый полный список element types.
+
+Текущий рабочий источник правды для списка element types:
+
+```text
+docs/08_digital_system_cad/metamodel/01_Model_Elements.md
+```
+
+Правила версионирования и приоритета списков element types описаны в:
+
+```text
+docs/08_digital_system_cad/metamodel/00_Element_Set_Versions.md
+```
+
+Это означает:
+
+- `Digital_System_CAD_Concept_for_Codex.md` содержит начальную концептуальную версию списка;
+- `01_Metamodel_Form.md` содержит форму описания метамодели;
+- `01_Model_Elements.md` содержит текущий рабочий список element types;
+- другие документы должны ссылаться на текущий список, а не поддерживать собственные конкурирующие версии.
+
+Если в документах обнаружен новый кандидат element type, он должен быть:
+
+1. добавлен как candidate в `01_Model_Elements.md`; или
+2. зафиксирован как `OpenQuestion`; или
+3. отнесён к будущему profile-specific / domain extension set.
+
+## 3. Что такое рабочая форма метамодели
 
 Рабочая форма метамодели — это способ описывать:
 
@@ -23,7 +52,7 @@
 
 Рабочая форма нужна до доказательной проверки, потому что без неё невозможно одинаково собирать информацию по разным примерам.
 
-## 3. Базовая структура
+## 4. Базовая структура
 
 ```text
 Metamodel Form
@@ -41,39 +70,19 @@ Metamodel Form
 └── Traceability Rule
 ```
 
-## 4. Element Type
+## 5. Element Type
 
 `Element Type` описывает вид объекта, который может существовать в модели цифровой системы.
-
-Начальный список кандидатов:
-
-- Project;
-- Requirement;
-- Actor;
-- Scenario;
-- Module;
-- Entity;
-- DataField;
-- Rule;
-- State;
-- Event;
-- Flow;
-- Storage;
-- Interface;
-- Integration;
-- Error;
-- TestCase;
-- Task;
-- CodeArtifact.
 
 Форма описания `Element Type`:
 
 ```text
 Type ID:
 Type name:
-Purpose:
+Status:
 Layer:
 Definition:
+Purpose:
 Description:
 Context:
 Typical examples:
@@ -87,9 +96,15 @@ SDD usage:
 Open questions:
 ```
 
-## 5. Element Card
+Правило:
 
-`Element Card` описывает конкретный элемент модели.
+> `Element Type` должен иметь Definition, Purpose, Context и Not examples. Имя типа не считается достаточным определением.
+
+Текущий список element types не приводится здесь намеренно. Он ведётся в [[docs/08_digital_system_cad/metamodel/01_Model_Elements|Model Elements]].
+
+## 6. Element Card
+
+`Element Card` описывает конкретный элемент модели на уровне M1.
 
 Универсальная форма:
 
@@ -113,13 +128,17 @@ Open questions:
 
 Минимальные статусы:
 
-- draft;
-- candidate;
-- accepted;
-- rejected;
-- deprecated.
+- `draft`;
+- `candidate`;
+- `accepted`;
+- `rejected`;
+- `deprecated`.
 
-## 6. Relation Type
+Правило:
+
+> Конкретный элемент модели не должен появляться только как имя. Если элемент влияет на SDD, задачу, тест, диаграмму или Codex context, он должен иметь Element Card.
+
+## 7. Relation Type
 
 `Relation Type` описывает допустимую связь между элементами.
 
@@ -130,6 +149,7 @@ Open questions:
 ```text
 Relation ID:
 Relation name:
+Status:
 Source type:
 Target type:
 Meaning:
@@ -138,39 +158,38 @@ Required:
 Cardinality:
 Validation rule:
 Examples:
+Not examples:
 Open questions:
 ```
 
 Форма конкретной связи:
 
 ```text
+ID:
 Source element:
 Relation:
 Target element:
-Reason:
-Required:
 Meaning:
+Reason:
+Source:
+Required:
 Validation status:
 Open questions:
 ```
 
-Пример:
+Каноническое правило направления связи проверки:
 
 ```text
-Source element: REQ-001
-Relation: is_verified_by
-Target element: TEST-001
-Required: yes
+TestCase verifies Requirement
 ```
 
-Основная машинная форма проверки:
+Обратная форма:
 
 ```text
-Source element: TEST-001
-Relation: verifies
-Target element: REQ-001
-Required: yes
+Requirement is_verified_by TestCase
 ```
+
+может использоваться только как читаемое inverse view в документах, но не как отдельная хранимая связь, если inverse relation storage не введён явно.
 
 Если проверка нужна, но ясного Requirement нет:
 
@@ -182,7 +201,7 @@ Required: yes
 Meaning: TestCase ожидает уточнения Requirement и имеет статус pending_requirement.
 ```
 
-## 7. Structured Fact
+## 8. Structured Fact
 
 `Structured Fact` описывает проверяемое утверждение о цифровой системе.
 
@@ -206,7 +225,7 @@ Open questions:
 ```text
 RULE-001 validates FIELD-001.
 RULE-001 raises ERR-001.
-TEST-001 verifies RULE-001.
+TEST-001 verifies REQ-001.
 TASK-001 implements REQ-001.
 ```
 
@@ -214,11 +233,11 @@ TASK-001 implements REQ-001.
 
 > Модель должна быть не списком объектов, а сетью структурированных фактов.
 
-## 8. Register
+## 9. Register
 
-`Register` — табличное представление элементов одного типа.
+`Register` — табличное представление элементов, связей или structured facts.
 
-Минимальная форма реестра:
+Минимальная форма реестра element type:
 
 ```text
 ID | Type | Name | Status | Purpose | Related elements | Open questions
@@ -226,7 +245,7 @@ ID | Type | Name | Status | Purpose | Related elements | Open questions
 
 Реестр не должен быть отдельным источником правды. Он является view над моделью.
 
-## 9. View
+## 10. View
 
 `View` — представление части модели для конкретной задачи или пользователя.
 
@@ -260,7 +279,7 @@ Output format:
 Open questions:
 ```
 
-## 10. Viewpoint
+## 11. Viewpoint
 
 `Viewpoint` описывает, с какой позиции рассматривается модель.
 
@@ -287,7 +306,7 @@ Open questions:
 - implementation viewpoint;
 - Codex context viewpoint.
 
-## 11. Transformation
+## 12. Transformation
 
 `Transformation` описывает преобразование модели в другой результат.
 
@@ -313,7 +332,7 @@ Validation after transformation:
 Open questions:
 ```
 
-## 12. Validation Rule
+## 13. Validation Rule
 
 `Validation Rule` описывает проверку целостности модели.
 
@@ -334,12 +353,12 @@ Open questions:
 
 Минимальные уровни severity:
 
-- info;
-- warning;
-- error;
-- blocker.
+- `info`;
+- `warning`;
+- `error`;
+- `blocker`.
 
-## 13. Controlled Vocabulary
+## 14. Controlled Vocabulary
 
 `Controlled Vocabulary` фиксирует допустимые термины модели и их значения.
 
@@ -361,7 +380,7 @@ Open questions:
 
 > Имя не является определением. Важный термин должен иметь Definition, Context и границы применения.
 
-## 14. Questionnaire Mapping
+## 15. Questionnaire Mapping
 
 `Questionnaire Mapping` показывает, какие элементы модели создаёт или обновляет вопрос анкеты.
 
@@ -385,7 +404,7 @@ Open questions:
 
 > Анкета должна собирать структурированные данные для модели, а не только свободный текст.
 
-## 15. Traceability Rule
+## 16. Traceability Rule
 
 `Traceability Rule` описывает обязательные цепочки связи.
 
@@ -413,23 +432,25 @@ Violation severity:
 Open questions:
 ```
 
-## 16. Как использовать форму
+## 17. Как использовать форму
 
 Порядок работы:
 
 1. Собрать информацию через существующие документы, анкеты или пример.
 2. Выделить кандидаты в элементы модели.
-3. Дать каждому важному элементу Definition, Purpose, Context и Source.
-4. Заполнить Element Cards.
-5. Создать связи между элементами.
-6. Описать Structured Facts.
-7. Занести элементы в Register.
-8. Проверить Validation Rules.
-9. Сформировать нужные Views.
-10. Проверить, можно ли получить SDD или Codex context.
-11. Зафиксировать, каких элементов, связей или определений не хватило.
+3. Проверить текущий список element types в [[docs/08_digital_system_cad/metamodel/01_Model_Elements|Model Elements]].
+4. Если нужного типа нет, создать OpenQuestion или candidate element type.
+5. Дать каждому важному элементу Definition, Purpose, Context и Source.
+6. Заполнить Element Cards.
+7. Создать связи между элементами.
+8. Описать Structured Facts.
+9. Занести элементы в Register.
+10. Проверить Validation Rules.
+11. Сформировать нужные Views.
+12. Проверить, можно ли получить SDD или Codex context.
+13. Зафиксировать, каких элементов, связей или определений не хватило.
 
-## 17. Что эта форма пока не решает
+## 18. Что эта форма пока не решает
 
 Форма пока не доказывает:
 
@@ -441,9 +462,14 @@ Open questions:
 
 Эти вопросы должны проверяться позже на примерах.
 
-## 18. Связанные документы
+## 19. Связанные документы
 
 ### Входные документы
+
+- [[docs/08_digital_system_cad/metamodel/00_Element_Set_Versions|Element Set Versions]]
+  - Передаёт: правило версионирования списков element types и текущий источник правды.
+  - Используется для: предотвращения расхождения списков элементов между документами.
+  - Ограничение: не описывает каждый element type подробно.
 
 - [[docs/08_digital_system_cad/research/01_Metamodeling_Methods_And_Standards|Metamodeling Methods and Standards]]
   - Передаёт: методы и стандарты метамоделирования.
@@ -451,9 +477,9 @@ Open questions:
   - Ограничение: не задаёт конкретную метамодель цифровой системы.
 
 - [[Digital_System_CAD_Concept_for_Codex|Digital System CAD Concept]]
-  - Передаёт: начальный список элементов и общую гипотезу.
-  - Используется для: наполнения рабочей формы.
-  - Ограничение: не является проверенной спецификацией модели.
+  - Передаёт: начальную гипотезу и concept set.
+  - Используется для: понимания, почему element types выделяются.
+  - Ограничение: не является текущим полным списком element types.
 
 - [[Digital_System_CAD_Philosophical_Essay_for_Codex|Digital System CAD Philosophical Essay]]
   - Передаёт: принципы structured facts, typed relations, definitions, views, interpretation, controlled vocabulary и provisional metamodel.
@@ -464,13 +490,13 @@ Open questions:
 
 - [[docs/08_digital_system_cad/metamodel/01_Model_Elements|Model Elements]]
   - Получает: форму описания типов элементов.
-  - Используется для: детализации кандидатов в элементы модели.
+  - Используется для: детализации текущего рабочего списка element types.
   - Ограничение: не должен менять правила формы без обновления этого документа.
 
 - [[docs/08_digital_system_cad/metamodel/02_Model_Relations|Model Relations]]
   - Получает: форму описания связей.
   - Используется для: детализации допустимых отношений между элементами.
-  - Ограничение: не должен смешивать связи с примерами объектов.
+  - Ограничение: relation types должны ссылаться на element types из текущего working element set или фиксировать OpenQuestion.
 
 - [[docs/08_digital_system_cad/metamodel/03_Structured_Facts|Structured Facts]]
   - Получает: форму Structured Fact.
@@ -497,13 +523,7 @@ Open questions:
   - Используется для: описания SDD как view/transformation модели.
   - Ограничение: не должен становиться свободным шаблоном SDD без source facts.
 
-## 19. История изменений
+## 20. История изменений
 
 - Initial version: создана рабочая форма метамодели для сбора, структурирования и проверки информации о цифровых системах.
-- Updated: форма усилена принципами философского эссе: structured facts, relation as first-class object, Definition, Context, Viewpoint и Controlled Vocabulary.
-- Updated: выходные ссылки приведены к созданным документам Model Elements и Model Relations.
-- Updated: добавлена выходная ссылка на созданный документ Structured Facts.
-- Updated: добавлена выходная ссылка на созданный документ Model Registers.
-- Updated: добавлена выходная ссылка на созданный документ Controlled Vocabulary.
-- Updated: добавлена выходная ссылка на созданный документ Traceability.
-- Updated: добавлена выходная ссылка на созданный документ SDD From Model.
+- Updated: форма больше не содержит независимый полный список element types; текущий список вынесен в `01_Model_Elements.md`, а правило версионирования — в `00_Element_Set_Versions.md`.
