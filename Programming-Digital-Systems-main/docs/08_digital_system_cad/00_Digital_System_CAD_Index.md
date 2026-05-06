@@ -9,8 +9,9 @@
 - зачем существует слой `docs/08_digital_system_cad/`;
 - какие документы уже есть;
 - какие документы являются входными;
-- какие документы нужно создать дальше;
-- как текущая исследовательская работа должна превращаться в рабочую метамодель цифровой системы.
+- какие документы нужно читать Codex и человеку;
+- как текущая исследовательская работа должна превращаться в рабочую метамодель цифровой системы;
+- где находятся актуальные документы по element types, relation types, safety profile, traceability и SDD transformation.
 
 > [!info] Главное
 > Текущий этап — не разработка приложения и не создание metamodeling workbench. Текущий этап — сбор, формирование и структурирование информации, чтобы получить рабочую метамодель цифровой системы.
@@ -39,7 +40,10 @@ Digital system model = typed elements + typed relations + structured facts + val
 - формирует кандидаты элементов модели;
 - формирует кандидаты связей;
 - описывает structured facts;
-- готовит будущие реестры, views, SDD transformations и validation rules;
+- описывает registers как views модели;
+- описывает traceability rules;
+- описывает SDD как transformation модели;
+- описывает safety как model layer / active profile;
 - готовит проверку на примерах.
 
 Сейчас проект не делает:
@@ -58,8 +62,18 @@ docs/08_digital_system_cad/
 ├── research/
 │   └── 01_Metamodeling_Methods_And_Standards.md
 ├── metamodel/
-│   └── 01_Metamodel_Form.md
+│   ├── 00_Element_Set_Versions.md
+│   ├── 01_Metamodel_Form.md
+│   ├── 01_Model_Elements.md
+│   ├── 02_Model_Relations.md
+│   ├── 03_Structured_Facts.md
+│   ├── 04_Model_Registers.md
+│   ├── 05_Controlled_Vocabulary.md
+│   ├── 06_Traceability.md
+│   ├── 07_SDD_From_Model.md
+│   └── 08_Safety_As_Model_Layer.md
 └── validation/
+    └── 01_Python_File_Processing_Utility_Metamodel_Check.md
 ```
 
 Планируемое развитие:
@@ -77,9 +91,12 @@ docs/08_digital_system_cad/
 
 Папки создаются только если они помогают упорядочить документы для Obsidian и не дублируют существующие слои базы знаний.
 
-## 5. Входные документы
+## 5. Главные входные документы
 
-### 5.1. Главные входные документы
+- [[PROJECT_SCOPE|PROJECT_SCOPE]]
+  - Передаёт: масштаб проекта Programming Digital Systems и связь с Digital System CAD.
+  - Используется для: удержания границ.
+  - Ограничение: не задаёт детальный план метамодели.
 
 - [[Digital_System_CAD_Concept_for_Codex|Digital System CAD Concept]]
   - Передаёт: конечную цель, гипотезу, идею модели цифровой системы, базовые элементы и роль SDD.
@@ -87,21 +104,26 @@ docs/08_digital_system_cad/
   - Ограничение: не является финальной спецификацией метамодели.
 
 - [[Digital_System_CAD_Philosophical_Essay_for_Codex|Digital System CAD Philosophical Essay]]
-  - Передаёт: жёсткие принципы model/view separation, typed relations, structured facts, Definition/Context/Source и provisional metamodel.
+  - Передаёт: принципы model/view separation, typed relations, structured facts, Definition/Context/Source и provisional metamodel.
   - Используется для: проверки качества формулировок и запрета свободных догадок.
   - Ограничение: не является технической спецификацией.
 
-- [[PROJECT_SCOPE|PROJECT_SCOPE]]
-  - Передаёт: масштаб проекта Programming Digital Systems и связь с Digital System CAD.
-  - Используется для: удержания границ.
-  - Ограничение: не задаёт детальный план метамодели.
+- [[AGENTS|AGENTS]]
+  - Передаёт: общие правила работы AI-агента с репозиторием.
+  - Используется для: сохранения структуры, масштаба и связи с Digital System CAD.
+  - Ограничение: не заменяет документы конкретного слоя.
+
+- [[AGENTS.override|AGENTS override]]
+  - Передаёт: дополнительные правила для safety-relevant systems.
+  - Используется для: применения `Safety as Model Layer` в Codex workflow.
+  - Ограничение: не заменяет основной `AGENTS.md`, а дополняет его.
 
 - [[TODO|TODO]]
   - Передаёт: текущий оперативный план.
   - Используется для: выбора следующих работ.
   - Ограничение: не является содержательной моделью.
 
-### 5.2. Опорные слои базы знаний
+## 6. Опорные слои базы знаний
 
 - [[docs/05_encyclopedia/Entities|Entities]]
 - [[docs/05_encyclopedia/Data|Data]]
@@ -122,41 +144,53 @@ docs/08_digital_system_cad/
 
 Энциклопедия используется как controlled vocabulary и источник кандидатов в элементы, свойства, relation types, validation rules и open questions.
 
-## 6. Существующие документы слоя
+Если термин из энциклопедии конфликтует с рабочей метамоделью, приоритет имеет рабочий metamodel layer, а конфликт фиксируется как OpenQuestion.
 
-### 6.1. Research
+## 7. Документы Research
 
 - [[docs/08_digital_system_cad/research/01_Metamodeling_Methods_And_Standards|Metamodeling Methods and Standards]]
   - Назначение: зафиксировать методы, стандарты и reference technologies метамоделирования.
   - Статус: рабочий исследовательский документ.
   - Следующее действие: использовать выводы как правила при формировании элементов, связей, views и transformations.
 
-### 6.2. Metamodel
+## 8. Документы Metamodel
+
+### 8.1. Element set and form
+
+- [[docs/08_digital_system_cad/metamodel/00_Element_Set_Versions|Element Set Versions]]
+  - Назначение: зафиксировать правило версионирования element types и определить текущий источник правды.
+  - Статус: рабочий документ согласования списков element types.
+  - Передаёт: v0.1 concept set, v0.2 working metamodel candidate set, v0.2-safety active profile, v0.3 future profiles.
+  - Ограничение: не описывает каждый element type подробно.
 
 - [[docs/08_digital_system_cad/metamodel/01_Metamodel_Form|Metamodel Form]]
   - Назначение: задать рабочую форму описания Element Type, Element Card, Relation Type, Structured Fact, Register, View, Viewpoint, Transformation, Validation Rule, Controlled Vocabulary, Questionnaire Mapping и Traceability Rule.
   - Статус: рабочая форма сбора информации.
-  - Следующее действие: создать документы конкретных кандидатов метамодели.
+  - Ограничение: не хранит собственный независимый список element types.
 
 - [[docs/08_digital_system_cad/metamodel/01_Model_Elements|Model Elements]]
-  - Назначение: описать кандидаты типов элементов модели.
-  - Статус: первый рабочий список кандидатов.
-  - Следующее действие: проверить элементы на первом примере и уточнить обязательные поля.
+  - Назначение: описать текущие кандидаты типов элементов модели.
+  - Статус: текущий рабочий источник правды для element types.
+  - Следующее действие: проверять элементы на примерах и уточнять обязательные поля.
+
+### 8.2. Relations and facts
 
 - [[docs/08_digital_system_cad/metamodel/02_Model_Relations|Model Relations]]
   - Назначение: описать кандидаты типов связей как first-class objects.
   - Статус: первый рабочий список relation types.
-  - Следующее действие: использовать relation types для формы structured facts.
+  - Следующее действие: использовать relation types для structured facts и traceability.
 
 - [[docs/08_digital_system_cad/metamodel/03_Structured_Facts|Structured Facts]]
   - Назначение: описать форму проверяемых утверждений модели.
   - Статус: первый рабочий вариант.
-  - Следующее действие: использовать facts как основу реестров, views, SDD и трассировки.
+  - Следующее действие: использовать facts как основу registers, views, SDD и трассировки.
+
+### 8.3. Views, vocabulary, traceability and SDD
 
 - [[docs/08_digital_system_cad/metamodel/04_Model_Registers|Model Registers]]
   - Назначение: описать registers как табличные views над elements и structured facts.
   - Статус: первый рабочий вариант.
-  - Следующее действие: использовать registers для первого validation example.
+  - Следующее действие: использовать registers для validation examples.
 
 - [[docs/08_digital_system_cad/metamodel/05_Controlled_Vocabulary|Controlled Vocabulary]]
   - Назначение: стабилизировать термины, определения, синонимы, запрещённые синонимы и границы применения.
@@ -166,257 +200,82 @@ docs/08_digital_system_cad/
 - [[docs/08_digital_system_cad/metamodel/06_Traceability|Traceability]]
   - Назначение: описать обязательные цепочки трассировки между требованиями, моделью, задачами, кодом, тестами, SDD и open questions.
   - Статус: первый рабочий вариант.
-  - Следующее действие: использовать traceability rules при описании SDD как transformation модели.
+  - Следующее действие: расширить traceability правилами safety profile.
 
 - [[docs/08_digital_system_cad/metamodel/07_SDD_From_Model|SDD From Model]]
   - Назначение: описать SDD как набор views и transformations из модели.
   - Статус: первый рабочий вариант.
-  - Следующее действие: проверить цепочку model -> SDD на первом validation example.
+  - Следующее действие: проверить цепочку model -> SDD на validation example.
 
-### 6.3. Validation
+### 8.4. Safety profile
+
+- [[docs/08_digital_system_cad/metamodel/08_Safety_As_Model_Layer|Safety as Model Layer]]
+  - Назначение: описать safety как часть модели, а не как внешний стоп-фактор.
+  - Статус: active profile для safety-relevant systems.
+  - Передаёт: SafetyRequirement, SafetyRule, CriticalEvent, FailsafeState, SafetyError, SafetyTestCase, SafetyGap, SafetyGate, ForbiddenBehavior, P0 safety tests.
+  - Главное правило: SafetyGap блокирует только unsafe execution paths и разрешает safe work продолжаться.
+  - Ограничение: safety profile не заменяет доменные safety standards, но задаёт рабочую форму модели и Codex workflow.
+
+## 9. Документы Validation
 
 - [[docs/08_digital_system_cad/validation/01_Python_File_Processing_Utility_Metamodel_Check|Python File Processing Utility Metamodel Check]]
   - Назначение: проверить рабочую форму метамодели на первом простом примере.
   - Статус: первый validation-документ.
   - Вывод: форма применима, draft SDD возможен, но полный technical SDD блокируется open questions.
 
-Будущая роль:
+Будущая роль validation:
 
 - проверка метамодели на разных типах цифровых систем;
 - фиксация слабых мест;
 - сравнение универсального ядра и доменных расширений;
-- проверка цепочки `анкета -> модель -> SDD -> задачи -> тесты`.
+- проверка цепочки `анкета -> модель -> SDD -> задачи -> тесты`;
+- проверка safety profile на safety-relevant systems.
 
-## 7. Планируемые документы metamodel
+## 10. Текущий источник правды
 
-Следующие документы должны появиться в `docs/08_digital_system_cad/metamodel/`.
-
-### 7.1. `01_Model_Elements.md`
-
-Назначение: описать кандидаты типов элементов модели.
-
-Статус: создан первый рабочий вариант.
-
-Ожидаемые элементы:
-
-- Project;
-- Requirement;
-- Actor;
-- Scenario;
-- Entity;
-- DataField;
-- Rule;
-- State;
-- Event;
-- Flow;
-- Storage;
-- Interface;
-- Integration;
-- Error;
-- Module;
-- Layer;
-- Model;
-- Dependency;
-- Configuration;
-- ExtensionPoint;
-- TestCase;
-- Task;
-- CodeArtifact.
-
-Для каждого элемента нужно определить:
-
-- Definition;
-- Purpose;
-- Context;
-- Required fields;
-- Optional fields;
-- Not examples;
-- Related elements;
-- Required relations;
-- Validation questions;
-- SDD usage;
-- Open questions.
-
-### 7.2. `02_Model_Relations.md`
-
-Назначение: описать допустимые типы связей как элементы первого класса.
-
-Статус: создан первый рабочий вариант.
-
-Примеры связей:
-
-- `Project contains Requirement`;
-- `Entity contains DataField`;
-- `Rule validates DataField`;
-- `Rule raises Error`;
-- `Event triggers Flow`;
-- `Event changes State`;
-- `Flow transfers DataField`;
-- `Storage stores Entity`;
-- `Interface exposes Entity`;
-- `Module provides Interface`;
-- `Module depends_on Module`;
-- `TestCase verifies Rule`;
-- `Task implements Requirement`;
-- `CodeArtifact implements Module`.
-
-### 7.3. `03_Structured_Facts.md`
-
-Назначение: описать форму проверяемого утверждения модели.
-
-Статус: создан первый рабочий вариант.
-
-Минимальная форма:
-
-```yaml
-id:
-subject:
-relation:
-object:
-source:
-context:
-validation_status:
-open_questions:
-```
-
-### 7.4. `04_Model_Registers.md`
-
-Назначение: описать таблицы-реестры как views модели.
-
-Статус: создан первый рабочий вариант.
-
-Реестры не должны быть источником истины. Они должны быть табличным представлением model elements и structured facts.
-
-### 7.5. `05_Controlled_Vocabulary.md`
-
-Назначение: зафиксировать термины, определения, допустимые синонимы, запрещённые синонимы и границы применения.
-
-Статус: создан первый рабочий вариант.
-
-Главное правило:
-
-> Имя не является определением.
-
-### 7.6. `06_Traceability.md`
-
-Назначение: описать обязательные цепочки трассировки.
-
-Статус: создан первый рабочий вариант.
-
-Минимальная цепочка:
+Для текущей работы действует такой порядок:
 
 ```text
-Requirement -> Task -> CodeArtifact -> TestCase
+PROJECT_SCOPE.md
+-> Digital_System_CAD_Concept_for_Codex.md
+-> 00_Element_Set_Versions.md
+-> 01_Metamodel_Form.md
+-> 01_Model_Elements.md
+-> 02_Model_Relations.md
+-> 08_Safety_As_Model_Layer.md, если система safety-relevant
+-> 03_Structured_Facts.md
+-> 04_Model_Registers.md
+-> 05_Controlled_Vocabulary.md
+-> 06_Traceability.md
+-> 07_SDD_From_Model.md
+-> validation examples
 ```
 
-Желательная цепочка:
+Правило:
 
-```text
-Requirement -> Module -> Service -> Entity -> DataField -> Rule -> Error -> TestCase -> Task -> CodeArtifact
-```
+> Если документ содержит старый или укороченный список element types, он должен считаться concept / historical / explanatory list, а не текущим рабочим источником правды.
 
-### 7.7. `07_SDD_From_Model.md`
+## 11. Следующие обновления ссылок
 
-Назначение: описать SDD как view/transformation модели.
+При следующей безопасной ревизии нужно проверить необходимость точечного обновления:
 
-SDD не должен быть свободным документом, оторванным от model elements, structured facts и validation rules.
+- [[TODO|TODO]]
+  - Добавить `00_Element_Set_Versions.md` и `08_Safety_As_Model_Layer.md` в список сделанного.
+  - Исправить старые строки вида `Нет ...`, если они уже закрыты.
 
-Статус: создан первый рабочий вариант.
+- [[docs/00_maps/00_Documentation_Map|Documentation Map]]
+  - Добавить ссылку на `AGENTS.override.md` и safety profile в агентный и Digital System CAD слои.
 
-## 8. Планируемые документы validation
+- [[docs/00_maps/00_Knowledge_Layer_Map|Knowledge Layer Map]]
+  - Добавить safety profile как часть Digital System CAD knowledge layer.
 
-### 8.1. Первый проверочный пример
+- [[docs/08_digital_system_cad/metamodel/06_Traceability|Traceability]]
+  - Добавить отдельный traceability pattern для SafetyRequirement -> SafetyRule -> SafetyTestCase -> Task -> CodeArtifact.
 
-Источник:
+- [[docs/08_digital_system_cad/metamodel/07_SDD_From_Model|SDD From Model]]
+  - Добавить правило, что SDD должен иметь safety section для safety-relevant systems.
 
-- [[docs/06_examples/Scripts/Python_File_Processing_Utility|Python File Processing Utility]]
+## 12. История изменений
 
-Нужно проверить:
-
-- можно ли выделить elements;
-- можно ли назначить ID;
-- можно ли построить relations;
-- можно ли получить structured facts;
-- можно ли сформировать SDD;
-- какие элементы оказались лишними;
-- каких элементов не хватило.
-
-### 8.2. Следующие проверочные области
-
-- GUI-приложение;
-- Excel / SVG / template-система;
-- CNC / промышленная автоматизация;
-- web/API или интеграционная система.
-
-## 9. Views и transformations
-
-Digital System CAD должен рассматривать документы, таблицы, диаграммы, анкеты и SDD как views или transformations одной модели.
-
-Основные views:
-
-- questionnaire view;
-- register view;
-- diagram view;
-- SDD section view;
-- task list view;
-- test plan view;
-- Codex context view.
-
-Основные transformations:
-
-- `model -> SDD`;
-- `model -> task list`;
-- `model -> test plan`;
-- `model -> diagram`;
-- `model -> Codex context`;
-- `questionnaire answers -> model elements`;
-- `model validation -> open questions`.
-
-## 10. Правила работы Codex в этом слое
-
-Codex должен:
-
-1. Не предлагать реализацию приложения раньше формирования рабочей метамодели.
-2. Не считать diagram, table, questionnaire или SDD source of truth.
-3. Считать source of truth моделью: typed elements, typed relations, structured facts, validation rules.
-4. Добавлять новое понятие сначала в metamodel / research / controlled vocabulary, а не сразу в реализацию.
-5. Не использовать имя как определение.
-6. Для важных элементов фиксировать Definition, Purpose, Context и Source.
-7. Если есть неоднозначность, фиксировать Open question.
-8. Создавать папки и подпапки для Obsidian, если это реально улучшает структуру документов.
-9. Поддерживать Obsidian wikilinks и карты.
-10. Любой будущий SDD рассматривать как view/transformation модели.
-
-## 11. Ближайший порядок работы
-
-1. Создать полный Facts Register для [[docs/06_examples/Scripts/Python_File_Processing_Utility|Python File Processing Utility]].
-2. Создать draft SDD для Python File Processing Utility.
-3. Закрыть или явно оставить open questions, влияющие на technical requirements.
-4. Проверить форму на втором примере другого типа.
-
-## 12. Критерии готовности слоя
-
-Слой Digital System CAD считается рабочим для текущего этапа, если:
-
-- есть индекс слоя;
-- есть рабочая форма метамодели;
-- есть список кандидатов элементов;
-- есть список кандидатов relations;
-- есть форма structured facts;
-- есть правила ID и реестров;
-- есть controlled vocabulary;
-- есть правила трассировки;
-- SDD описан как transformation модели;
-- есть хотя бы один проверочный пример;
-- открытые вопросы фиксируются явно.
-
-## 13. История изменений
-
-- Initial version: создан индекс слоя Digital System CAD с текущей структурой, входными документами, планируемыми metamodel-документами, validation-направлением и ближайшим порядком работы.
-- Updated: добавлены созданные документы [[docs/08_digital_system_cad/metamodel/01_Model_Elements|Model Elements]] и [[docs/08_digital_system_cad/metamodel/02_Model_Relations|Model Relations]].
-- Updated: добавлен созданный документ [[docs/08_digital_system_cad/metamodel/03_Structured_Facts|Structured Facts]].
-- Updated: добавлен созданный документ [[docs/08_digital_system_cad/metamodel/04_Model_Registers|Model Registers]].
-- Updated: добавлен созданный документ [[docs/08_digital_system_cad/metamodel/05_Controlled_Vocabulary|Controlled Vocabulary]].
-- Updated: добавлен созданный документ [[docs/08_digital_system_cad/metamodel/06_Traceability|Traceability]].
-- Updated: добавлен созданный документ [[docs/08_digital_system_cad/metamodel/07_SDD_From_Model|SDD From Model]].
-- Updated: добавлен первый validation-документ [[docs/08_digital_system_cad/validation/01_Python_File_Processing_Utility_Metamodel_Check|Python File Processing Utility Metamodel Check]].
+- Initial version: создан индекс слоя Digital System CAD.
+- Updated: добавлены ссылки на `00_Element_Set_Versions.md`, `08_Safety_As_Model_Layer.md`, `AGENTS.override.md`, обновлена структура metamodel-документов и источник правды для element types.
